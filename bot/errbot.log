@@ -1,0 +1,1480 @@
+2017-01-14 09:09:05,817 INFO     errbot.specific_plugin_manager storage search paths {'/usr/local/lib/python3.5/dist-packages/errbot/storage'}
+2017-01-14 09:09:05,819 INFO     errbot.specific_plugin_manager Found those plugings available:
+2017-01-14 09:09:05,820 INFO     errbot.specific_plugin_manager 	    Memory  (/usr/local/lib/python3.5/dist-packages/errbot/storage/memory.py)
+2017-01-14 09:09:05,820 INFO     errbot.specific_plugin_manager 	     Shelf  (/usr/local/lib/python3.5/dist-packages/errbot/storage/shelf.py)
+2017-01-14 09:09:05,820 INFO     errbot.bootstrap          Found Storage plugin: 'Shelf'
+Description: This is the storage plugin for the traditional shelf store for errbot.
+2017-01-14 09:09:05,821 DEBUG    errbot.specific_plugin_manager Refilter the plugins...
+2017-01-14 09:09:05,821 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/storage/memory.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,822 DEBUG    errbot.specific_plugin_manager Load the one remaining...
+2017-01-14 09:09:05,824 DEBUG    errbot.specific_plugin_manager Class to load ShelfStoragePlugin
+2017-01-14 09:09:05,825 DEBUG    errbot.storage            Opening storage 'repomgr'
+2017-01-14 09:09:05,825 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/repomgr.db
+2017-01-14 09:09:05,830 DEBUG    errbot.storage            Opening storage 'core'
+2017-01-14 09:09:05,830 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/core.db
+2017-01-14 09:09:05,833 INFO     errbot.specific_plugin_manager backends search paths {'/usr/local/lib/python3.5/dist-packages/errbot/backends'}
+2017-01-14 09:09:05,842 INFO     errbot.specific_plugin_manager Found those plugings available:
+2017-01-14 09:09:05,842 INFO     errbot.specific_plugin_manager 	      Text  (/usr/local/lib/python3.5/dist-packages/errbot/backends/text.py)
+2017-01-14 09:09:05,842 INFO     errbot.specific_plugin_manager 	   Hipchat  (/usr/local/lib/python3.5/dist-packages/errbot/backends/hipchat.py)
+2017-01-14 09:09:05,843 INFO     errbot.specific_plugin_manager 	   Graphic  (/usr/local/lib/python3.5/dist-packages/errbot/backends/graphic.py)
+2017-01-14 09:09:05,843 INFO     errbot.specific_plugin_manager 	      XMPP  (/usr/local/lib/python3.5/dist-packages/errbot/backends/xmpp.py)
+2017-01-14 09:09:05,843 INFO     errbot.specific_plugin_manager 	       IRC  (/usr/local/lib/python3.5/dist-packages/errbot/backends/irc.py)
+2017-01-14 09:09:05,844 INFO     errbot.specific_plugin_manager 	     Slack  (/usr/local/lib/python3.5/dist-packages/errbot/backends/slack.py)
+2017-01-14 09:09:05,844 INFO     errbot.specific_plugin_manager 	      Null  (/usr/local/lib/python3.5/dist-packages/errbot/backends/null.py)
+2017-01-14 09:09:05,844 INFO     errbot.specific_plugin_manager 	      Test  (/usr/local/lib/python3.5/dist-packages/errbot/backends/test.py)
+2017-01-14 09:09:05,844 INFO     errbot.specific_plugin_manager 	  Telegram  (/usr/local/lib/python3.5/dist-packages/errbot/backends/telegram_messenger.py)
+2017-01-14 09:09:05,845 INFO     errbot.bootstrap          Found Backend plugin: 'Slack'
+						Description: This is the slack backend for Err.
+2017-01-14 09:09:05,845 DEBUG    errbot.specific_plugin_manager Refilter the plugins...
+2017-01-14 09:09:05,846 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/text.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,846 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/hipchat.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,847 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/graphic.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,848 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/xmpp.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,848 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/irc.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,850 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/null.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,851 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/test.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,851 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/telegram_messenger.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:05,851 DEBUG    errbot.specific_plugin_manager Load the one remaining...
+2017-01-14 09:09:05,961 ERROR    errbot.backends.slack     Could not start the Slack back-end
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/errbot/backends/slack.py", line 28, in <module>
+    from slackclient import SlackClient
+ImportError: No module named 'slackclient'
+2017-01-14 09:09:05,962 CRITICAL errbot.backends.slack     You need to install the slackclient support in order to use the Slack.
+You can do `pip install errbot[slack]` to install it
+2017-01-14 09:09:53,297 INFO     errbot.specific_plugin_manager storage search paths {'/usr/local/lib/python3.5/dist-packages/errbot/storage'}
+2017-01-14 09:09:53,299 INFO     errbot.specific_plugin_manager Found those plugings available:
+2017-01-14 09:09:53,300 INFO     errbot.specific_plugin_manager 	    Memory  (/usr/local/lib/python3.5/dist-packages/errbot/storage/memory.py)
+2017-01-14 09:09:53,300 INFO     errbot.specific_plugin_manager 	     Shelf  (/usr/local/lib/python3.5/dist-packages/errbot/storage/shelf.py)
+2017-01-14 09:09:53,300 INFO     errbot.bootstrap          Found Storage plugin: 'Shelf'
+Description: This is the storage plugin for the traditional shelf store for errbot.
+2017-01-14 09:09:53,300 DEBUG    errbot.specific_plugin_manager Refilter the plugins...
+2017-01-14 09:09:53,301 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/storage/memory.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,302 DEBUG    errbot.specific_plugin_manager Load the one remaining...
+2017-01-14 09:09:53,304 DEBUG    errbot.specific_plugin_manager Class to load ShelfStoragePlugin
+2017-01-14 09:09:53,304 DEBUG    errbot.storage            Opening storage 'repomgr'
+2017-01-14 09:09:53,304 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/repomgr.db
+2017-01-14 09:09:53,307 DEBUG    errbot.storage            Opening storage 'core'
+2017-01-14 09:09:53,307 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/core.db
+2017-01-14 09:09:53,309 INFO     errbot.specific_plugin_manager backends search paths {'/usr/local/lib/python3.5/dist-packages/errbot/backends'}
+2017-01-14 09:09:53,317 INFO     errbot.specific_plugin_manager Found those plugings available:
+2017-01-14 09:09:53,317 INFO     errbot.specific_plugin_manager 	      Text  (/usr/local/lib/python3.5/dist-packages/errbot/backends/text.py)
+2017-01-14 09:09:53,318 INFO     errbot.specific_plugin_manager 	   Hipchat  (/usr/local/lib/python3.5/dist-packages/errbot/backends/hipchat.py)
+2017-01-14 09:09:53,318 INFO     errbot.specific_plugin_manager 	   Graphic  (/usr/local/lib/python3.5/dist-packages/errbot/backends/graphic.py)
+2017-01-14 09:09:53,318 INFO     errbot.specific_plugin_manager 	      XMPP  (/usr/local/lib/python3.5/dist-packages/errbot/backends/xmpp.py)
+2017-01-14 09:09:53,318 INFO     errbot.specific_plugin_manager 	       IRC  (/usr/local/lib/python3.5/dist-packages/errbot/backends/irc.py)
+2017-01-14 09:09:53,319 INFO     errbot.specific_plugin_manager 	     Slack  (/usr/local/lib/python3.5/dist-packages/errbot/backends/slack.py)
+2017-01-14 09:09:53,319 INFO     errbot.specific_plugin_manager 	      Null  (/usr/local/lib/python3.5/dist-packages/errbot/backends/null.py)
+2017-01-14 09:09:53,319 INFO     errbot.specific_plugin_manager 	      Test  (/usr/local/lib/python3.5/dist-packages/errbot/backends/test.py)
+2017-01-14 09:09:53,320 INFO     errbot.specific_plugin_manager 	  Telegram  (/usr/local/lib/python3.5/dist-packages/errbot/backends/telegram_messenger.py)
+2017-01-14 09:09:53,320 INFO     errbot.bootstrap          Found Backend plugin: 'Slack'
+						Description: This is the slack backend for Err.
+2017-01-14 09:09:53,320 DEBUG    errbot.specific_plugin_manager Refilter the plugins...
+2017-01-14 09:09:53,321 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/text.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,322 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/hipchat.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,322 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/graphic.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,323 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/xmpp.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,323 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/irc.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,325 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/null.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,326 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/test.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,326 WARNING  yapsy                     Plugin candidate '/usr/local/lib/python3.5/dist-packages/errbot/backends/telegram_messenger.plug'  rejected by strategy 'SpecificBackendLocator'
+2017-01-14 09:09:53,326 DEBUG    errbot.specific_plugin_manager Load the one remaining...
+2017-01-14 09:09:53,498 DEBUG    errbot.specific_plugin_manager Class to load SlackBackend
+2017-01-14 09:09:53,499 DEBUG    errbot.core               ErrBot init.
+2017-01-14 09:09:53,499 DEBUG    errbot.backends.base      Backend init.
+2017-01-14 09:09:53,502 DEBUG    errbot.core               created a thread pool of size 10.
+2017-01-14 09:09:53,514 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.smart_strong".
+2017-01-14 09:09:53,515 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.smart_strong.SmartEmphasisExtension".
+2017-01-14 09:09:53,515 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.fenced_code".
+2017-01-14 09:09:53,515 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.fenced_code.FencedCodeExtension".
+2017-01-14 09:09:53,517 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.footnotes".
+2017-01-14 09:09:53,517 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.footnotes.FootnoteExtension".
+2017-01-14 09:09:53,523 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.attr_list".
+2017-01-14 09:09:53,524 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.attr_list.AttrListExtension".
+2017-01-14 09:09:53,525 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.def_list".
+2017-01-14 09:09:53,525 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.def_list.DefListExtension".
+2017-01-14 09:09:53,526 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.tables".
+2017-01-14 09:09:53,526 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.tables.TableExtension".
+2017-01-14 09:09:53,527 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.abbr".
+2017-01-14 09:09:53,527 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.abbr.AbbrExtension".
+2017-01-14 09:09:53,528 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.extra.ExtraExtension".
+2017-01-14 09:09:53,528 DEBUG    MARKDOWN                  Successfully loaded extension "errbot.rendering.ansiext.AnsiExtension".
+2017-01-14 09:09:53,529 DEBUG    errbot.core               Initializing backend storage
+2017-01-14 09:09:53,530 DEBUG    errbot.storage            Opening storage 'slack_backend'
+2017-01-14 09:09:53,530 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/slack_backend.db
+2017-01-14 09:09:53,534 DEBUG    errbot.plugin_manager     All plugin roots:
+2017-01-14 09:09:53,534 DEBUG    errbot.plugin_manager     -> /usr/local/lib/python3.5/dist-packages/errbot/core_plugins
+2017-01-14 09:09:53,535 DEBUG    errbot.plugin_manager     Add /usr/local/lib/python3.5/dist-packages/errbot/core_plugins to sys.path
+2017-01-14 09:09:53,535 DEBUG    errbot.plugin_manager     -> /root/atraey/bot/plugins/err-example
+2017-01-14 09:09:53,535 DEBUG    errbot.plugin_manager     Add /root/atraey/bot/plugins/err-example to sys.path
+2017-01-14 09:09:53,535 DEBUG    errbot.plugin_manager     /usr/local/lib/python3.5/dist-packages/errbot/core_plugins has no requirements.txt file
+2017-01-14 09:09:53,536 DEBUG    errbot.plugin_manager     /root/atraey/bot/plugins/err-example has no requirements.txt file
+2017-01-14 09:09:53,643 INFO     errbot                    webhooks:  Flag to bind /echo to echo
+2017-01-14 09:09:53,662 DEBUG    errbot.bootstrap          Start serving commands from the slack backend
+2017-01-14 09:09:53,663 INFO     errbot.backends.slack     Verifying authentication token
+2017-01-14 09:09:53,669 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:09:54,526 DEBUG    requests.packages.urllib3.connectionpool "POST /api/auth.test HTTP/1.1" 200 115
+2017-01-14 09:09:54,530 DEBUG    errbot.backends.slack     Token accepted
+2017-01-14 09:09:54,530 INFO     errbot.backends.slack     Connecting to Slack real-time-messaging API
+2017-01-14 09:09:54,532 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:09:55,871 DEBUG    requests.packages.urllib3.connectionpool "POST /api/rtm.start HTTP/1.1" 200 4379
+2017-01-14 09:09:56,114 INFO     errbot.backends.slack     Connected
+2017-01-14 09:09:56,114 DEBUG    errbot.backends.slack     Converted bot_alt_prefixes: ('atraey',)
+2017-01-14 09:09:56,645 DEBUG    errbot.backends.slack     Processing slack event: {'type': 'hello'}
+2017-01-14 09:09:56,646 INFO     errbot.core               Activate internal commands
+2017-01-14 09:09:56,646 INFO     errbot.plugin_manager     Activate bot plugins...
+2017-01-14 09:09:56,647 INFO     errbot.plugin_manager     Activate plugin: Backup
+2017-01-14 09:09:56,647 DEBUG    errbot.plugin_manager     Plugin Backup has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,648 INFO     errbot.plugin_manager     Activating Backup with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,648 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,649 DEBUG    errbot.botplugin          Init storage for Backup
+2017-01-14 09:09:56,649 DEBUG    errbot.storage            Opening storage 'Backup'
+2017-01-14 09:09:56,650 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/Backup.db
+2017-01-14 09:09:56,652 DEBUG    errbot.core               Adding command : backup -> backup
+2017-01-14 09:09:56,652 INFO     errbot.core_plugins.wsview Checking Backup for webhooks
+2017-01-14 09:09:56,653 INFO     errbot.plugin_manager     Activate plugin: Webserver
+2017-01-14 09:09:56,653 DEBUG    errbot.plugin_manager     Plugin Webserver has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,654 INFO     errbot.plugin_manager     Activating Webserver with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,654 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,654 INFO     errbot.plugins.Webserver  Webserver is not configured. Forbid activation
+2017-01-14 09:09:56,655 INFO     errbot.core_plugins.wsview Checking Webserver for webhooks
+2017-01-14 09:09:56,655 INFO     errbot.core_plugins.wsview Webhook routing echo
+2017-01-14 09:09:56,656 INFO     errbot.plugin_manager     Activate plugin: ACLs
+2017-01-14 09:09:56,656 DEBUG    errbot.plugin_manager     Plugin ACLs has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,656 INFO     errbot.plugin_manager     Activating ACLs with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,657 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,657 DEBUG    errbot.botplugin          Init storage for ACLS
+2017-01-14 09:09:56,657 DEBUG    errbot.storage            Opening storage 'ACLS'
+2017-01-14 09:09:56,658 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/ACLS.db
+2017-01-14 09:09:56,660 DEBUG    errbot.core               Adding command filter: acls
+2017-01-14 09:09:56,660 INFO     errbot.core_plugins.wsview Checking ACLS for webhooks
+2017-01-14 09:09:56,661 INFO     errbot.plugin_manager     Activate plugin: Help
+2017-01-14 09:09:56,661 DEBUG    errbot.plugin_manager     Plugin Help has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,662 INFO     errbot.plugin_manager     Activating Help with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,662 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,663 DEBUG    errbot.botplugin          Init storage for Help
+2017-01-14 09:09:56,663 DEBUG    errbot.storage            Opening storage 'Help'
+2017-01-14 09:09:56,663 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/Help.db
+2017-01-14 09:09:56,665 DEBUG    errbot.core               Adding command : about -> about
+2017-01-14 09:09:56,666 DEBUG    errbot.core               Adding command : apropos -> apropos
+2017-01-14 09:09:56,666 DEBUG    errbot.core               Adding command : help -> help
+2017-01-14 09:09:56,667 INFO     errbot.core_plugins.wsview Checking Help for webhooks
+2017-01-14 09:09:56,667 INFO     errbot.plugin_manager     Activate plugin: Utils
+2017-01-14 09:09:56,668 DEBUG    errbot.plugin_manager     Plugin Utils has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,668 INFO     errbot.plugin_manager     Activating Utils with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,669 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,670 DEBUG    errbot.botplugin          Init storage for Utils
+2017-01-14 09:09:56,670 DEBUG    errbot.storage            Opening storage 'Utils'
+2017-01-14 09:09:56,670 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/Utils.db
+2017-01-14 09:09:56,672 DEBUG    errbot.core               Adding command : echo -> echo
+2017-01-14 09:09:56,672 DEBUG    errbot.core               Adding command : history -> history
+2017-01-14 09:09:56,673 DEBUG    errbot.core               Adding command : log_tail -> log_tail
+2017-01-14 09:09:56,673 DEBUG    errbot.core               Adding command : render_test -> render_test
+2017-01-14 09:09:56,673 DEBUG    errbot.core               Adding command : whoami -> whoami
+2017-01-14 09:09:56,674 INFO     errbot.core_plugins.wsview Checking Utils for webhooks
+2017-01-14 09:09:56,675 INFO     errbot.plugin_manager     Activate plugin: VersionChecker
+2017-01-14 09:09:56,675 DEBUG    errbot.plugin_manager     Plugin VersionChecker has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,676 INFO     errbot.plugin_manager     Activating VersionChecker with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,676 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,676 DEBUG    errbot.plugins.VersionChecker Checking version in background.
+2017-01-14 09:09:56,678 DEBUG    errbot.botplugin          Programming the polling of version_check every 86400 seconds with args [] and kwargs {}
+2017-01-14 09:09:56,681 INFO     requests.packages.urllib3.connectionpool Starting new HTTP connection (1): version.errbot.io
+2017-01-14 09:09:56,681 DEBUG    errbot.botplugin          Init storage for VersionChecker
+2017-01-14 09:09:56,682 DEBUG    errbot.storage            Opening storage 'VersionChecker'
+2017-01-14 09:09:56,682 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/VersionChecker.db
+2017-01-14 09:09:56,684 INFO     errbot.core_plugins.wsview Checking VersionChecker for webhooks
+2017-01-14 09:09:56,685 INFO     errbot.plugin_manager     Activate plugin: ChatRoom
+2017-01-14 09:09:56,686 DEBUG    errbot.plugin_manager     Plugin ChatRoom has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,686 INFO     errbot.plugin_manager     Activating ChatRoom with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,687 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,687 DEBUG    errbot.botplugin          Init storage for ChatRoom
+2017-01-14 09:09:56,688 DEBUG    errbot.storage            Opening storage 'ChatRoom'
+2017-01-14 09:09:56,688 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/ChatRoom.db
+2017-01-14 09:09:56,690 DEBUG    errbot.core               Adding command : room_create -> room_create
+2017-01-14 09:09:56,690 DEBUG    errbot.core               Adding command : room_destroy -> room_destroy
+2017-01-14 09:09:56,690 DEBUG    errbot.core               Adding command : room_invite -> room_invite
+2017-01-14 09:09:56,691 DEBUG    errbot.core               Adding command : room_join -> room_join
+2017-01-14 09:09:56,691 DEBUG    errbot.core               Adding command : room_leave -> room_leave
+2017-01-14 09:09:56,691 DEBUG    errbot.core               Adding command : room_list -> room_list
+2017-01-14 09:09:56,691 DEBUG    errbot.core               Adding command : room_occupants -> room_occupants
+2017-01-14 09:09:56,691 DEBUG    errbot.core               Adding command : room_topic -> room_topic
+2017-01-14 09:09:56,692 INFO     errbot.core_plugins.wsview Checking ChatRoom for webhooks
+2017-01-14 09:09:56,693 INFO     errbot.plugin_manager     Activate plugin: Health
+2017-01-14 09:09:56,693 DEBUG    errbot.plugin_manager     Plugin Health has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,693 INFO     errbot.plugin_manager     Activating Health with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,693 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,694 DEBUG    errbot.botplugin          Init storage for Health
+2017-01-14 09:09:56,694 DEBUG    errbot.storage            Opening storage 'Health'
+2017-01-14 09:09:56,694 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/Health.db
+2017-01-14 09:09:56,696 DEBUG    errbot.core               Adding command : restart -> restart
+2017-01-14 09:09:56,696 DEBUG    errbot.core               Adding command : shutdown -> shutdown
+2017-01-14 09:09:56,696 DEBUG    errbot.core               Adding command : status -> status
+2017-01-14 09:09:56,697 DEBUG    errbot.core               Adding command : status_gc -> status_gc
+2017-01-14 09:09:56,697 DEBUG    errbot.core               Adding command : status_load -> status_load
+2017-01-14 09:09:56,697 DEBUG    errbot.core               Adding command : status_plugins -> status_plugins
+2017-01-14 09:09:56,697 DEBUG    errbot.core               Adding command : uptime -> uptime
+2017-01-14 09:09:56,698 INFO     errbot.core_plugins.wsview Checking Health for webhooks
+2017-01-14 09:09:56,698 INFO     errbot.plugin_manager     Activate plugin: Plugins
+2017-01-14 09:09:56,699 DEBUG    errbot.plugin_manager     Plugin Plugins has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,699 INFO     errbot.plugin_manager     Activating Plugins with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,699 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,700 DEBUG    errbot.botplugin          Init storage for Plugins
+2017-01-14 09:09:56,700 DEBUG    errbot.storage            Opening storage 'Plugins'
+2017-01-14 09:09:56,700 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/Plugins.db
+2017-01-14 09:09:56,702 DEBUG    errbot.core               Adding command : plugin_activate -> plugin_activate
+2017-01-14 09:09:56,702 DEBUG    errbot.core               Adding command : plugin_blacklist -> plugin_blacklist
+2017-01-14 09:09:56,702 DEBUG    errbot.core               Adding command : plugin_config -> plugin_config
+2017-01-14 09:09:56,703 DEBUG    errbot.core               Adding command : plugin_deactivate -> plugin_deactivate
+2017-01-14 09:09:56,703 DEBUG    errbot.core               Adding command : plugin_reload -> plugin_reload
+2017-01-14 09:09:56,703 DEBUG    errbot.core               Adding command : plugin_unblacklist -> plugin_unblacklist
+2017-01-14 09:09:56,703 DEBUG    errbot.core               Adding command : repos -> repos
+2017-01-14 09:09:56,703 DEBUG    errbot.core               Adding command : repos_install -> repos_install
+2017-01-14 09:09:56,704 DEBUG    errbot.core               Adding command : repos_search -> repos_search
+2017-01-14 09:09:56,704 DEBUG    errbot.core               Adding command : repos_uninstall -> repos_uninstall
+2017-01-14 09:09:56,704 DEBUG    errbot.core               Adding command : repos_update -> repos_update
+2017-01-14 09:09:56,704 INFO     errbot.core_plugins.wsview Checking Plugins for webhooks
+2017-01-14 09:09:56,705 INFO     errbot.plugin_manager     Activate plugin: Flows
+2017-01-14 09:09:56,705 DEBUG    errbot.plugin_manager     Plugin Flows has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,706 INFO     errbot.plugin_manager     Activating Flows with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,706 DEBUG    errbot.templating         Templates directory found for this plugin [/usr/local/lib/python3.5/dist-packages/errbot/core_plugins/templates]
+2017-01-14 09:09:56,706 DEBUG    errbot.botplugin          Init storage for Flows
+2017-01-14 09:09:56,707 DEBUG    errbot.storage            Opening storage 'Flows'
+2017-01-14 09:09:56,707 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/Flows.db
+2017-01-14 09:09:56,709 DEBUG    errbot.core               Adding command : flows_kill -> flows_kill
+2017-01-14 09:09:56,709 DEBUG    errbot.core               Adding command : flows_list -> flows_list
+2017-01-14 09:09:56,709 DEBUG    errbot.core               Adding command : flows_show -> flows_show
+2017-01-14 09:09:56,709 DEBUG    errbot.core               Adding command : flows_start -> flows_start
+2017-01-14 09:09:56,710 DEBUG    errbot.core               Adding command : flows_status -> flows_status
+2017-01-14 09:09:56,710 DEBUG    errbot.core               Adding command : flows_stop -> flows_stop
+2017-01-14 09:09:56,710 INFO     errbot.core_plugins.wsview Checking Flows for webhooks
+2017-01-14 09:09:56,711 INFO     errbot.plugin_manager     Activate plugin: Example
+2017-01-14 09:09:56,711 DEBUG    errbot.plugin_manager     Plugin Example has no section [Errbot]. Assuming this plugin is runnning on any Errbot version.
+2017-01-14 09:09:56,712 INFO     errbot.plugin_manager     Activating Example with min_err_version = 4.3.5 and max_version = 4.3.5
+2017-01-14 09:09:56,712 DEBUG    errbot.templating         No templates directory found for this plugin [Looking for /root/atraey/bot/plugins/err-example/templates]
+2017-01-14 09:09:56,712 DEBUG    errbot.botplugin          Init storage for Example
+2017-01-14 09:09:56,713 DEBUG    errbot.storage            Opening storage 'Example'
+2017-01-14 09:09:56,713 DEBUG    errbot.storage.shelf      Open shelf storage /root/atraey/bot/data/Example.db
+2017-01-14 09:09:56,715 DEBUG    errbot.core               Adding command : tryme -> tryme
+2017-01-14 09:09:56,715 INFO     errbot.core_plugins.wsview Checking Example for webhooks
+2017-01-14 09:09:56,716 DEBUG    errbot.plugin_manager     Activate flow plugins ...
+2017-01-14 09:09:56,716 INFO     errbot.core               
+2017-01-14 09:09:56,717 INFO     errbot.core               Notifying connection to all the plugins...
+2017-01-14 09:09:56,717 DEBUG    errbot.core               Trigger callback_connect on Backup
+2017-01-14 09:09:56,717 DEBUG    errbot.core               Trigger callback_connect on ACLS
+2017-01-14 09:09:56,718 DEBUG    errbot.core               Trigger callback_connect on Help
+2017-01-14 09:09:56,718 DEBUG    errbot.core               Trigger callback_connect on Utils
+2017-01-14 09:09:56,718 DEBUG    errbot.core               Trigger callback_connect on VersionChecker
+2017-01-14 09:09:56,719 DEBUG    errbot.core               Trigger callback_connect on ChatRoom
+2017-01-14 09:09:56,719 INFO     errbot.plugins.ChatRoom   Callback_connect
+2017-01-14 09:09:56,719 DEBUG    errbot.core               Trigger callback_connect on Health
+2017-01-14 09:09:56,720 DEBUG    errbot.core               Trigger callback_connect on Plugins
+2017-01-14 09:09:56,720 DEBUG    errbot.core               Trigger callback_connect on Flows
+2017-01-14 09:09:56,720 DEBUG    errbot.core               Trigger callback_connect on Example
+2017-01-14 09:09:56,721 INFO     errbot.core               Plugin activation done.
+2017-01-14 09:09:56,721 DEBUG    errbot.core               Triggering callback_presence on Backup
+2017-01-14 09:09:56,722 DEBUG    errbot.core               Triggering callback_presence on ACLS
+2017-01-14 09:09:56,722 DEBUG    errbot.core               Triggering callback_presence on Help
+2017-01-14 09:09:56,723 DEBUG    errbot.core               Triggering callback_presence on Utils
+2017-01-14 09:09:56,723 DEBUG    errbot.core               Triggering callback_presence on VersionChecker
+2017-01-14 09:09:56,723 DEBUG    errbot.core               Triggering callback_presence on ChatRoom
+2017-01-14 09:09:56,724 DEBUG    errbot.core               Triggering callback_presence on Health
+2017-01-14 09:09:56,724 DEBUG    errbot.core               Triggering callback_presence on Plugins
+2017-01-14 09:09:56,724 DEBUG    errbot.core               Triggering callback_presence on Flows
+2017-01-14 09:09:56,725 DEBUG    errbot.core               Triggering callback_presence on Example
+2017-01-14 09:09:56,909 DEBUG    errbot.backends.slack     No event handler available for reconnect_url, ignoring this event
+2017-01-14 09:09:57,027 DEBUG    requests.packages.urllib3.connectionpool "GET /?errbot=4.3.5&python=3.5.2 HTTP/1.1" 200 5
+2017-01-14 09:09:57,029 DEBUG    errbot.plugins.VersionChecker Tested current Errbot version and it is 4.3.3
+2017-01-14 09:09:57,172 DEBUG    errbot.backends.slack     Processing slack event: {'presence': 'active', 'user': 'U3RKPPXJ8', 'type': 'presence_change'}
+2017-01-14 09:09:57,173 DEBUG    errbot.core               Triggering callback_presence on Backup
+2017-01-14 09:09:57,173 DEBUG    errbot.core               Triggering callback_presence on ACLS
+2017-01-14 09:09:57,174 DEBUG    errbot.core               Triggering callback_presence on Help
+2017-01-14 09:09:57,174 DEBUG    errbot.core               Triggering callback_presence on Utils
+2017-01-14 09:09:57,174 DEBUG    errbot.core               Triggering callback_presence on VersionChecker
+2017-01-14 09:09:57,175 DEBUG    errbot.core               Triggering callback_presence on ChatRoom
+2017-01-14 09:09:57,175 DEBUG    errbot.core               Triggering callback_presence on Health
+2017-01-14 09:09:57,176 DEBUG    errbot.core               Triggering callback_presence on Plugins
+2017-01-14 09:09:57,176 DEBUG    errbot.core               Triggering callback_presence on Flows
+2017-01-14 09:09:57,176 DEBUG    errbot.core               Triggering callback_presence on Example
+2017-01-14 09:10:00,080 DEBUG    errbot.backends.slack     No event handler available for reconnect_url, ignoring this event
+2017-01-14 09:10:28,116 DEBUG    errbot.backends.slack     Processing slack event: {'presence': 'active', 'user': 'U3RH6Q9D0', 'type': 'presence_change'}
+2017-01-14 09:10:28,118 DEBUG    errbot.core               Triggering callback_presence on Backup
+2017-01-14 09:10:28,118 DEBUG    errbot.core               Triggering callback_presence on ACLS
+2017-01-14 09:10:28,118 DEBUG    errbot.core               Triggering callback_presence on Help
+2017-01-14 09:10:28,119 DEBUG    errbot.core               Triggering callback_presence on Utils
+2017-01-14 09:10:28,119 DEBUG    errbot.core               Triggering callback_presence on VersionChecker
+2017-01-14 09:10:28,119 DEBUG    errbot.core               Triggering callback_presence on ChatRoom
+2017-01-14 09:10:28,120 DEBUG    errbot.core               Triggering callback_presence on Health
+2017-01-14 09:10:28,120 DEBUG    errbot.core               Triggering callback_presence on Plugins
+2017-01-14 09:10:28,120 DEBUG    errbot.core               Triggering callback_presence on Flows
+2017-01-14 09:10:28,120 DEBUG    errbot.core               Triggering callback_presence on Example
+2017-01-14 09:10:41,248 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:10:42,358 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'D3QSW1ZPT', 'user': 'U3RH6Q9D0', 'type': 'message', 'team': 'T3RH6Q9CJ', 'ts': '1484385041.000002', 'text': '!help'}
+2017-01-14 09:10:42,359 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'D3QSW1ZPT',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '!help',
+ 'ts': '1484385041.000002',
+ 'type': 'message',
+ 'user': 'U3RH6Q9D0'}
+2017-01-14 09:10:42,360 DEBUG    errbot.backends.slack     Escaped IDs event text: !help
+2017-01-14 09:10:42,360 DEBUG    errbot.core               *** frm = @debojkakoti88
+2017-01-14 09:10:42,360 DEBUG    errbot.core               *** username = @debojkakoti88
+2017-01-14 09:10:42,360 DEBUG    errbot.core               *** text = !help
+2017-01-14 09:10:42,361 DEBUG    errbot.plugins.ACLS       Check help for ACLs.
+2017-01-14 09:10:42,361 INFO     errbot.plugins.ACLS       Matching ACL {} against username @debojkakoti88 for command Help:help
+2017-01-14 09:10:42,361 INFO     errbot.plugins.ACLS       Check if help is admin only command.
+2017-01-14 09:10:42,362 INFO     errbot.core               Processing command 'help' with parameters '' from @debojkakoti88
+2017-01-14 09:10:42,362 DEBUG    errbot.core               Triggering callback_message on Backup
+2017-01-14 09:10:42,362 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:10:42,363 DEBUG    errbot.core               Triggering callback_message on ACLS
+2017-01-14 09:10:42,363 DEBUG    errbot.flow               None matched.
+2017-01-14 09:10:42,363 DEBUG    errbot.core               Triggering callback_message on Help
+2017-01-14 09:10:42,365 DEBUG    errbot.backends.slack     Sending direct message to debojkakoti88 (D3QSW1ZPT)
+2017-01-14 09:10:42,365 DEBUG    errbot.core               Triggering callback_message on Utils
+2017-01-14 09:10:42,375 DEBUG    errbot.core               Triggering callback_message on VersionChecker
+2017-01-14 09:10:42,375 DEBUG    errbot.core               Triggering callback_message on ChatRoom
+2017-01-14 09:10:42,375 DEBUG    errbot.core               Triggering callback_message on Health
+2017-01-14 09:10:42,375 DEBUG    errbot.core               Triggering callback_message on Plugins
+2017-01-14 09:10:42,376 DEBUG    errbot.core               Triggering callback_message on Flows
+2017-01-14 09:10:42,376 DEBUG    errbot.core               Triggering callback_message on Example
+2017-01-14 09:10:42,380 DEBUG    errbot.backends.slack     Message size: 3206
+2017-01-14 09:10:42,382 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:10:42,621 DEBUG    errbot.backends.slack     No event handler available for desktop_notification, ignoring this event
+2017-01-14 09:10:43,199 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'D3QSW1ZPT', 'user': 'U3RKPPXJ8', 'type': 'message', 'ts': '1484385042.000003', 'team': 'T3RH6Q9CJ', 'bot_id': 'B3QSW1ZG9', 'text': '_All commands_\n\n *Backup*\n _Backup related commands._\n• *!backup* - Backup everything.\n *ChatRoom*\n _This is a basic implementation of a chatroom_\n• *!room join* - Join (creating it first if needed) a chatroom.\n• *!room topic* - Get or set the topic for a room.\n• *!room invite* - Invite one or more people into a chatroom.\n• *!room list* - List chatrooms the bot has joined.\n• *!room occupants* - List the occupants in a given chatroom.\n• *!room create* - Create a chatroom.\n• *!room leave* - Leave a chatroom.\n• *!room destroy* - Destroy a chatroom.\n *Example*\n _This is a very basic plugin to try out your new installation and get you started.\n    Feel free to tweak me to experiment with Errbot.\n    You can find me in your init directory in the subdirectory plugins._\n• *!tryme* - Execute to check if Errbot responds to command.\n *Flows*\n _Management commands related to flows / conversations._\n• *!flows start* - Manually start a flow within the context of the calling user.\n• *!flows list* - Displays the list of setup flows.\n• *!flows stop* - Stop flows you are in.\n• *!flows kill* - usage: flows_kill [-h] user flow_name\n• *!flows show* - Shows the structure of a flow.\n• *!flows status* - Displays the list of started flows.\n *Health*\n _Core plugin for bot lifecycle and health related commands._\n• *!status gc* - shows the garbage collection details\n• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n• *!uptime* - Return the uptime of the bot\n• *!status plugins* - shows the plugin status\n• *!status* - If I am alive I should be able to respond to this one\n• *!restart* - Restart the bot.\n• *!status load* - shows the load status\n *Help*\n _Core plugin of help related functions._\n• *!help* - Returns a help string listing available options.\n• *!apropos* - Returns a help string listing available options.\n• *!about* - Return information about this Errbot instance and version\n *Plugins*\n _Commands to manage the plugins of the bot by chatting._\n• *!repos install* - install a plugin repository from the given source or a known public repo (see...\n• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...\n• *!plugin unblacklist* - Remove a plugin from the blacklist\n• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]\n• *!repos update* - update the bot and/or plugins\n• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...\n• *!plugin config* - configure or get the configuration / configuration template for a specific pl...\n• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]\n• *!repos uninstall* - uninstall a plugin repository by name.\n• *!repos search* - Searches the repo index.\n• *!repos* - list the current active plugin repositories\n *Utils*\n _Core Errbot utils commands._\n• *!echo* - A simple echo command. Useful for encoding tests etc ...\n• *!log tail* - Display a tail of the log of n lines or 40 by default\n• *!render test* - Tests / showcases the markdown rendering on your current backend\n• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...\n• *!history* - display the command history'}
+2017-01-14 09:10:43,201 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'B3QSW1ZG9',
+ 'channel': 'D3QSW1ZPT',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '_All commands_\n'
+         '\n'
+         ' *Backup*\n'
+         ' _Backup related commands._\n'
+         '• *!backup* - Backup everything.\n'
+         ' *ChatRoom*\n'
+         ' _This is a basic implementation of a chatroom_\n'
+         '• *!room join* - Join (creating it first if needed) a chatroom.\n'
+         '• *!room topic* - Get or set the topic for a room.\n'
+         '• *!room invite* - Invite one or more people into a chatroom.\n'
+         '• *!room list* - List chatrooms the bot has joined.\n'
+         '• *!room occupants* - List the occupants in a given chatroom.\n'
+         '• *!room create* - Create a chatroom.\n'
+         '• *!room leave* - Leave a chatroom.\n'
+         '• *!room destroy* - Destroy a chatroom.\n'
+         ' *Example*\n'
+         ' _This is a very basic plugin to try out your new installation and '
+         'get you started.\n'
+         '    Feel free to tweak me to experiment with Errbot.\n'
+         '    You can find me in your init directory in the subdirectory '
+         'plugins._\n'
+         '• *!tryme* - Execute to check if Errbot responds to command.\n'
+         ' *Flows*\n'
+         ' _Management commands related to flows / conversations._\n'
+         '• *!flows start* - Manually start a flow within the context of the '
+         'calling user.\n'
+         '• *!flows list* - Displays the list of setup flows.\n'
+         '• *!flows stop* - Stop flows you are in.\n'
+         '• *!flows kill* - usage: flows_kill [-h] user flow_name\n'
+         '• *!flows show* - Shows the structure of a flow.\n'
+         '• *!flows status* - Displays the list of started flows.\n'
+         ' *Health*\n'
+         ' _Core plugin for bot lifecycle and health related commands._\n'
+         '• *!status gc* - shows the garbage collection details\n'
+         '• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n'
+         '• *!uptime* - Return the uptime of the bot\n'
+         '• *!status plugins* - shows the plugin status\n'
+         '• *!status* - If I am alive I should be able to respond to this one\n'
+         '• *!restart* - Restart the bot.\n'
+         '• *!status load* - shows the load status\n'
+         ' *Help*\n'
+         ' _Core plugin of help related functions._\n'
+         '• *!help* - Returns a help string listing available options.\n'
+         '• *!apropos* - Returns a help string listing available options.\n'
+         '• *!about* - Return information about this Errbot instance and '
+         'version\n'
+         ' *Plugins*\n'
+         ' _Commands to manage the plugins of the bot by chatting._\n'
+         '• *!repos install* - install a plugin repository from the given '
+         'source or a known public repo (see...\n'
+         '• *!plugin blacklist* - Blacklist a plugin so that it will not be '
+         'loaded automatically during bot sta...\n'
+         '• *!plugin unblacklist* - Remove a plugin from the blacklist\n'
+         '• *!plugin activate* - activate a plugin. [calls .activate() on the '
+         'plugin]\n'
+         '• *!repos update* - update the bot and/or plugins\n'
+         '• *!plugin reload* - reload a plugin: reload the code of the plugin '
+         'leaving the activation status ...\n'
+         '• *!plugin config* - configure or get the configuration / '
+         'configuration template for a specific pl...\n'
+         '• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on '
+         'the plugin]\n'
+         '• *!repos uninstall* - uninstall a plugin repository by name.\n'
+         '• *!repos search* - Searches the repo index.\n'
+         '• *!repos* - list the current active plugin repositories\n'
+         ' *Utils*\n'
+         ' _Core Errbot utils commands._\n'
+         '• *!echo* - A simple echo command. Useful for encoding tests etc '
+         '...\n'
+         '• *!log tail* - Display a tail of the log of n lines or 40 by '
+         'default\n'
+         '• *!render test* - Tests / showcases the markdown rendering on your '
+         'current backend\n'
+         '• *!whoami* - A simple command echoing the details of your '
+         'identifier. Useful to debug iden...\n'
+         '• *!history* - display the command history',
+ 'ts': '1484385042.000003',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8'}
+2017-01-14 09:10:43,203 DEBUG    errbot.backends.slack     Escaped IDs event text: _All commands_
+
+ *Backup*
+ _Backup related commands._
+• *!backup* - Backup everything.
+ *ChatRoom*
+ _This is a basic implementation of a chatroom_
+• *!room join* - Join (creating it first if needed) a chatroom.
+• *!room topic* - Get or set the topic for a room.
+• *!room invite* - Invite one or more people into a chatroom.
+• *!room list* - List chatrooms the bot has joined.
+• *!room occupants* - List the occupants in a given chatroom.
+• *!room create* - Create a chatroom.
+• *!room leave* - Leave a chatroom.
+• *!room destroy* - Destroy a chatroom.
+ *Example*
+ _This is a very basic plugin to try out your new installation and get you started.
+    Feel free to tweak me to experiment with Errbot.
+    You can find me in your init directory in the subdirectory plugins._
+• *!tryme* - Execute to check if Errbot responds to command.
+ *Flows*
+ _Management commands related to flows / conversations._
+• *!flows start* - Manually start a flow within the context of the calling user.
+• *!flows list* - Displays the list of setup flows.
+• *!flows stop* - Stop flows you are in.
+• *!flows kill* - usage: flows_kill [-h] user flow_name
+• *!flows show* - Shows the structure of a flow.
+• *!flows status* - Displays the list of started flows.
+ *Health*
+ _Core plugin for bot lifecycle and health related commands._
+• *!status gc* - shows the garbage collection details
+• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]
+• *!uptime* - Return the uptime of the bot
+• *!status plugins* - shows the plugin status
+• *!status* - If I am alive I should be able to respond to this one
+• *!restart* - Restart the bot.
+• *!status load* - shows the load status
+ *Help*
+ _Core plugin of help related functions._
+• *!help* - Returns a help string listing available options.
+• *!apropos* - Returns a help string listing available options.
+• *!about* - Return information about this Errbot instance and version
+ *Plugins*
+ _Commands to manage the plugins of the bot by chatting._
+• *!repos install* - install a plugin repository from the given source or a known public repo (see...
+• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...
+• *!plugin unblacklist* - Remove a plugin from the blacklist
+• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]
+• *!repos update* - update the bot and/or plugins
+• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...
+• *!plugin config* - configure or get the configuration / configuration template for a specific pl...
+• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]
+• *!repos uninstall* - uninstall a plugin repository by name.
+• *!repos search* - Searches the repo index.
+• *!repos* - list the current active plugin repositories
+ *Utils*
+ _Core Errbot utils commands._
+• *!echo* - A simple echo command. Useful for encoding tests etc ...
+• *!log tail* - Display a tail of the log of n lines or 40 by default
+• *!render test* - Tests / showcases the markdown rendering on your current backend
+• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...
+• *!history* - display the command history
+2017-01-14 09:10:43,205 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:10:43,244 DEBUG    requests.packages.urllib3.connectionpool "POST /api/chat.postMessage HTTP/1.1" 200 1434
+2017-01-14 09:10:43,248 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:10:43,248 DEBUG    errbot.flow               None matched.
+2017-01-14 09:10:43,248 DEBUG    errbot.flow               Test if the command help is an auto-trigger for any flow ...
+2017-01-14 09:12:00,108 DEBUG    errbot.backends.slack     No event handler available for reconnect_url, ignoring this event
+2017-01-14 09:12:13,380 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:12:14,016 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'D3QSW1ZPT', 'user': 'U3RH6Q9D0', 'type': 'message', 'team': 'T3RH6Q9CJ', 'ts': '1484385133.000004', 'text': '!help'}
+2017-01-14 09:12:14,017 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'D3QSW1ZPT',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '!help',
+ 'ts': '1484385133.000004',
+ 'type': 'message',
+ 'user': 'U3RH6Q9D0'}
+2017-01-14 09:12:14,018 DEBUG    errbot.backends.slack     Escaped IDs event text: !help
+2017-01-14 09:12:14,018 DEBUG    errbot.core               *** frm = @debojkakoti88
+2017-01-14 09:12:14,018 DEBUG    errbot.core               *** username = @debojkakoti88
+2017-01-14 09:12:14,018 DEBUG    errbot.core               *** text = !help
+2017-01-14 09:12:14,019 DEBUG    errbot.plugins.ACLS       Check help for ACLs.
+2017-01-14 09:12:14,019 INFO     errbot.plugins.ACLS       Matching ACL {} against username @debojkakoti88 for command Help:help
+2017-01-14 09:12:14,019 INFO     errbot.plugins.ACLS       Check if help is admin only command.
+2017-01-14 09:12:14,019 INFO     errbot.core               Processing command 'help' with parameters '' from @debojkakoti88
+2017-01-14 09:12:14,020 DEBUG    errbot.core               Triggering callback_message on Backup
+2017-01-14 09:12:14,020 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:12:14,020 DEBUG    errbot.core               Triggering callback_message on ACLS
+2017-01-14 09:12:14,020 DEBUG    errbot.flow               None matched.
+2017-01-14 09:12:14,021 DEBUG    errbot.core               Triggering callback_message on Help
+2017-01-14 09:12:14,022 DEBUG    errbot.core               Triggering callback_message on Utils
+2017-01-14 09:12:14,022 DEBUG    errbot.backends.slack     Sending direct message to debojkakoti88 (D3QSW1ZPT)
+2017-01-14 09:12:14,023 DEBUG    errbot.core               Triggering callback_message on VersionChecker
+2017-01-14 09:12:14,034 DEBUG    errbot.core               Triggering callback_message on ChatRoom
+2017-01-14 09:12:14,035 DEBUG    errbot.core               Triggering callback_message on Health
+2017-01-14 09:12:14,035 DEBUG    errbot.core               Triggering callback_message on Plugins
+2017-01-14 09:12:14,035 DEBUG    errbot.core               Triggering callback_message on Flows
+2017-01-14 09:12:14,035 DEBUG    errbot.core               Triggering callback_message on Example
+2017-01-14 09:12:14,034 DEBUG    errbot.backends.slack     Message size: 3206
+2017-01-14 09:12:14,038 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:12:15,008 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'D3QSW1ZPT', 'user': 'U3RKPPXJ8', 'type': 'message', 'ts': '1484385134.000005', 'team': 'T3RH6Q9CJ', 'bot_id': 'B3QSW1ZG9', 'text': '_All commands_\n\n *Backup*\n _Backup related commands._\n• *!backup* - Backup everything.\n *ChatRoom*\n _This is a basic implementation of a chatroom_\n• *!room join* - Join (creating it first if needed) a chatroom.\n• *!room topic* - Get or set the topic for a room.\n• *!room invite* - Invite one or more people into a chatroom.\n• *!room list* - List chatrooms the bot has joined.\n• *!room occupants* - List the occupants in a given chatroom.\n• *!room create* - Create a chatroom.\n• *!room leave* - Leave a chatroom.\n• *!room destroy* - Destroy a chatroom.\n *Example*\n _This is a very basic plugin to try out your new installation and get you started.\n    Feel free to tweak me to experiment with Errbot.\n    You can find me in your init directory in the subdirectory plugins._\n• *!tryme* - Execute to check if Errbot responds to command.\n *Flows*\n _Management commands related to flows / conversations._\n• *!flows start* - Manually start a flow within the context of the calling user.\n• *!flows list* - Displays the list of setup flows.\n• *!flows stop* - Stop flows you are in.\n• *!flows kill* - usage: flows_kill [-h] user flow_name\n• *!flows show* - Shows the structure of a flow.\n• *!flows status* - Displays the list of started flows.\n *Health*\n _Core plugin for bot lifecycle and health related commands._\n• *!status gc* - shows the garbage collection details\n• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n• *!uptime* - Return the uptime of the bot\n• *!status plugins* - shows the plugin status\n• *!status* - If I am alive I should be able to respond to this one\n• *!restart* - Restart the bot.\n• *!status load* - shows the load status\n *Help*\n _Core plugin of help related functions._\n• *!help* - Returns a help string listing available options.\n• *!apropos* - Returns a help string listing available options.\n• *!about* - Return information about this Errbot instance and version\n *Plugins*\n _Commands to manage the plugins of the bot by chatting._\n• *!repos install* - install a plugin repository from the given source or a known public repo (see...\n• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...\n• *!plugin unblacklist* - Remove a plugin from the blacklist\n• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]\n• *!repos update* - update the bot and/or plugins\n• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...\n• *!plugin config* - configure or get the configuration / configuration template for a specific pl...\n• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]\n• *!repos uninstall* - uninstall a plugin repository by name.\n• *!repos search* - Searches the repo index.\n• *!repos* - list the current active plugin repositories\n *Utils*\n _Core Errbot utils commands._\n• *!echo* - A simple echo command. Useful for encoding tests etc ...\n• *!log tail* - Display a tail of the log of n lines or 40 by default\n• *!render test* - Tests / showcases the markdown rendering on your current backend\n• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...\n• *!history* - display the command history'}
+2017-01-14 09:12:15,010 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'B3QSW1ZG9',
+ 'channel': 'D3QSW1ZPT',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '_All commands_\n'
+         '\n'
+         ' *Backup*\n'
+         ' _Backup related commands._\n'
+         '• *!backup* - Backup everything.\n'
+         ' *ChatRoom*\n'
+         ' _This is a basic implementation of a chatroom_\n'
+         '• *!room join* - Join (creating it first if needed) a chatroom.\n'
+         '• *!room topic* - Get or set the topic for a room.\n'
+         '• *!room invite* - Invite one or more people into a chatroom.\n'
+         '• *!room list* - List chatrooms the bot has joined.\n'
+         '• *!room occupants* - List the occupants in a given chatroom.\n'
+         '• *!room create* - Create a chatroom.\n'
+         '• *!room leave* - Leave a chatroom.\n'
+         '• *!room destroy* - Destroy a chatroom.\n'
+         ' *Example*\n'
+         ' _This is a very basic plugin to try out your new installation and '
+         'get you started.\n'
+         '    Feel free to tweak me to experiment with Errbot.\n'
+         '    You can find me in your init directory in the subdirectory '
+         'plugins._\n'
+         '• *!tryme* - Execute to check if Errbot responds to command.\n'
+         ' *Flows*\n'
+         ' _Management commands related to flows / conversations._\n'
+         '• *!flows start* - Manually start a flow within the context of the '
+         'calling user.\n'
+         '• *!flows list* - Displays the list of setup flows.\n'
+         '• *!flows stop* - Stop flows you are in.\n'
+         '• *!flows kill* - usage: flows_kill [-h] user flow_name\n'
+         '• *!flows show* - Shows the structure of a flow.\n'
+         '• *!flows status* - Displays the list of started flows.\n'
+         ' *Health*\n'
+         ' _Core plugin for bot lifecycle and health related commands._\n'
+         '• *!status gc* - shows the garbage collection details\n'
+         '• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n'
+         '• *!uptime* - Return the uptime of the bot\n'
+         '• *!status plugins* - shows the plugin status\n'
+         '• *!status* - If I am alive I should be able to respond to this one\n'
+         '• *!restart* - Restart the bot.\n'
+         '• *!status load* - shows the load status\n'
+         ' *Help*\n'
+         ' _Core plugin of help related functions._\n'
+         '• *!help* - Returns a help string listing available options.\n'
+         '• *!apropos* - Returns a help string listing available options.\n'
+         '• *!about* - Return information about this Errbot instance and '
+         'version\n'
+         ' *Plugins*\n'
+         ' _Commands to manage the plugins of the bot by chatting._\n'
+         '• *!repos install* - install a plugin repository from the given '
+         'source or a known public repo (see...\n'
+         '• *!plugin blacklist* - Blacklist a plugin so that it will not be '
+         'loaded automatically during bot sta...\n'
+         '• *!plugin unblacklist* - Remove a plugin from the blacklist\n'
+         '• *!plugin activate* - activate a plugin. [calls .activate() on the '
+         'plugin]\n'
+         '• *!repos update* - update the bot and/or plugins\n'
+         '• *!plugin reload* - reload a plugin: reload the code of the plugin '
+         'leaving the activation status ...\n'
+         '• *!plugin config* - configure or get the configuration / '
+         'configuration template for a specific pl...\n'
+         '• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on '
+         'the plugin]\n'
+         '• *!repos uninstall* - uninstall a plugin repository by name.\n'
+         '• *!repos search* - Searches the repo index.\n'
+         '• *!repos* - list the current active plugin repositories\n'
+         ' *Utils*\n'
+         ' _Core Errbot utils commands._\n'
+         '• *!echo* - A simple echo command. Useful for encoding tests etc '
+         '...\n'
+         '• *!log tail* - Display a tail of the log of n lines or 40 by '
+         'default\n'
+         '• *!render test* - Tests / showcases the markdown rendering on your '
+         'current backend\n'
+         '• *!whoami* - A simple command echoing the details of your '
+         'identifier. Useful to debug iden...\n'
+         '• *!history* - display the command history',
+ 'ts': '1484385134.000005',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8'}
+2017-01-14 09:12:15,012 DEBUG    errbot.backends.slack     Escaped IDs event text: _All commands_
+
+ *Backup*
+ _Backup related commands._
+• *!backup* - Backup everything.
+ *ChatRoom*
+ _This is a basic implementation of a chatroom_
+• *!room join* - Join (creating it first if needed) a chatroom.
+• *!room topic* - Get or set the topic for a room.
+• *!room invite* - Invite one or more people into a chatroom.
+• *!room list* - List chatrooms the bot has joined.
+• *!room occupants* - List the occupants in a given chatroom.
+• *!room create* - Create a chatroom.
+• *!room leave* - Leave a chatroom.
+• *!room destroy* - Destroy a chatroom.
+ *Example*
+ _This is a very basic plugin to try out your new installation and get you started.
+    Feel free to tweak me to experiment with Errbot.
+    You can find me in your init directory in the subdirectory plugins._
+• *!tryme* - Execute to check if Errbot responds to command.
+ *Flows*
+ _Management commands related to flows / conversations._
+• *!flows start* - Manually start a flow within the context of the calling user.
+• *!flows list* - Displays the list of setup flows.
+• *!flows stop* - Stop flows you are in.
+• *!flows kill* - usage: flows_kill [-h] user flow_name
+• *!flows show* - Shows the structure of a flow.
+• *!flows status* - Displays the list of started flows.
+ *Health*
+ _Core plugin for bot lifecycle and health related commands._
+• *!status gc* - shows the garbage collection details
+• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]
+• *!uptime* - Return the uptime of the bot
+• *!status plugins* - shows the plugin status
+• *!status* - If I am alive I should be able to respond to this one
+• *!restart* - Restart the bot.
+• *!status load* - shows the load status
+ *Help*
+ _Core plugin of help related functions._
+• *!help* - Returns a help string listing available options.
+• *!apropos* - Returns a help string listing available options.
+• *!about* - Return information about this Errbot instance and version
+ *Plugins*
+ _Commands to manage the plugins of the bot by chatting._
+• *!repos install* - install a plugin repository from the given source or a known public repo (see...
+• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...
+• *!plugin unblacklist* - Remove a plugin from the blacklist
+• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]
+• *!repos update* - update the bot and/or plugins
+• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...
+• *!plugin config* - configure or get the configuration / configuration template for a specific pl...
+• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]
+• *!repos uninstall* - uninstall a plugin repository by name.
+• *!repos search* - Searches the repo index.
+• *!repos* - list the current active plugin repositories
+ *Utils*
+ _Core Errbot utils commands._
+• *!echo* - A simple echo command. Useful for encoding tests etc ...
+• *!log tail* - Display a tail of the log of n lines or 40 by default
+• *!render test* - Tests / showcases the markdown rendering on your current backend
+• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...
+• *!history* - display the command history
+2017-01-14 09:12:15,010 DEBUG    requests.packages.urllib3.connectionpool "POST /api/chat.postMessage HTTP/1.1" 200 1434
+2017-01-14 09:12:15,014 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:12:15,017 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:12:15,017 DEBUG    errbot.flow               None matched.
+2017-01-14 09:12:15,018 DEBUG    errbot.flow               Test if the command help is an auto-trigger for any flow ...
+2017-01-14 09:12:19,366 DEBUG    errbot.backends.slack     No event handler available for desktop_notification, ignoring this event
+2017-01-14 09:12:37,657 DEBUG    errbot.backends.slack     No event handler available for channel_joined, ignoring this event
+2017-01-14 09:12:37,658 DEBUG    errbot.backends.slack     Processing slack event: {'subtype': 'channel_join', 'user': 'U3RKPPXJ8', 'type': 'message', 'channel': 'C3RF6HTL3', 'user_profile': {'first_name': 'Atraey', 'image_72': 'https://avatars.slack-edge.com/2017-01-14/128283198375_2e52c72ff2025131098e_72.png', 'name': 'atraey', 'avatar_hash': '2e52c72ff202', 'real_name': 'Atraey bot'}, 'inviter': 'U3RH6Q9D0', 'team': 'T3RH6Q9CJ', 'ts': '1484385157.000010', 'text': '<@U3RKPPXJ8|atraey> has joined the channel'}
+2017-01-14 09:12:37,658 DEBUG    errbot.backends.slack     building an identifier from <@U3RKPPXJ8|atraey>
+2017-01-14 09:12:37,660 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:12:38,496 DEBUG    requests.packages.urllib3.connectionpool "POST /api/im.open HTTP/1.1" 200 56
+2017-01-14 09:12:38,499 INFO     errbot.backends.slack     Tried to DM a bot.
+2017-01-14 09:12:38,499 DEBUG    errbot.backends.slack     Someone mentioned
+2017-01-14 09:12:38,500 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'C3RF6HTL3',
+ 'inviter': 'U3RH6Q9D0',
+ 'subtype': 'channel_join',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '<@U3RKPPXJ8|atraey> has joined the channel',
+ 'ts': '1484385157.000010',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8',
+ 'user_profile': {'avatar_hash': '2e52c72ff202',
+                  'first_name': 'Atraey',
+                  'image_72': 'https://avatars.slack-edge.com/2017-01-14/128283198375_2e52c72ff2025131098e_72.png',
+                  'name': 'atraey',
+                  'real_name': 'Atraey bot'}}
+2017-01-14 09:12:38,501 DEBUG    errbot.backends.slack     Escaped IDs event text: @atraey has joined the channel
+2017-01-14 09:12:38,501 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:12:38,501 DEBUG    errbot.core               @atraey has/have been mentioned
+2017-01-14 09:12:38,502 DEBUG    errbot.core               Triggering callback_mention on Backup
+2017-01-14 09:12:38,502 DEBUG    errbot.core               Triggering callback_mention on ACLS
+2017-01-14 09:12:38,502 DEBUG    errbot.core               Triggering callback_mention on Help
+2017-01-14 09:12:38,502 DEBUG    errbot.core               Triggering callback_mention on Utils
+2017-01-14 09:12:38,503 DEBUG    errbot.core               Triggering callback_mention on VersionChecker
+2017-01-14 09:12:38,503 DEBUG    errbot.core               Triggering callback_mention on ChatRoom
+2017-01-14 09:12:38,503 DEBUG    errbot.core               Triggering callback_mention on Health
+2017-01-14 09:12:38,503 DEBUG    errbot.core               Triggering callback_mention on Plugins
+2017-01-14 09:12:38,503 DEBUG    errbot.core               Triggering callback_mention on Flows
+2017-01-14 09:12:38,504 DEBUG    errbot.core               Triggering callback_mention on Example
+2017-01-14 09:12:40,513 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:12:41,362 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3RH6Q9D0', 'type': 'message', 'team': 'T3RH6Q9CJ', 'ts': '1484385160.000011', 'text': '!help'}
+2017-01-14 09:12:41,363 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '!help',
+ 'ts': '1484385160.000011',
+ 'type': 'message',
+ 'user': 'U3RH6Q9D0'}
+2017-01-14 09:12:41,364 DEBUG    errbot.backends.slack     Escaped IDs event text: !help
+2017-01-14 09:12:41,364 DEBUG    errbot.core               *** frm = #random/debojkakoti88
+2017-01-14 09:12:41,364 DEBUG    errbot.core               *** username = @debojkakoti88
+2017-01-14 09:12:41,365 DEBUG    errbot.core               *** text = !help
+2017-01-14 09:12:41,365 DEBUG    errbot.plugins.ACLS       Check help for ACLs.
+2017-01-14 09:12:41,365 INFO     errbot.plugins.ACLS       Matching ACL {} against username @debojkakoti88 for command Help:help
+2017-01-14 09:12:41,366 INFO     errbot.plugins.ACLS       Check if help is admin only command.
+2017-01-14 09:12:41,366 INFO     errbot.core               Processing command 'help' with parameters '' from #random/debojkakoti88
+2017-01-14 09:12:41,367 DEBUG    errbot.core               Triggering callback_message on Backup
+2017-01-14 09:12:41,367 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:12:41,367 DEBUG    errbot.core               Triggering callback_message on ACLS
+2017-01-14 09:12:41,367 DEBUG    errbot.flow               None matched.
+2017-01-14 09:12:41,368 DEBUG    errbot.core               Triggering callback_message on Help
+2017-01-14 09:12:41,369 DEBUG    errbot.backends.slack     Sending channel message to random (C3RF6HTL3)
+2017-01-14 09:12:41,370 DEBUG    errbot.core               Triggering callback_message on Utils
+2017-01-14 09:12:41,379 DEBUG    errbot.core               Triggering callback_message on VersionChecker
+2017-01-14 09:12:41,379 DEBUG    errbot.core               Triggering callback_message on ChatRoom
+2017-01-14 09:12:41,379 DEBUG    errbot.core               Triggering callback_message on Health
+2017-01-14 09:12:41,380 DEBUG    errbot.core               Triggering callback_message on Plugins
+2017-01-14 09:12:41,380 DEBUG    errbot.core               Triggering callback_message on Flows
+2017-01-14 09:12:41,380 DEBUG    errbot.core               Triggering callback_message on Example
+2017-01-14 09:12:41,386 DEBUG    errbot.backends.slack     Message size: 3206
+2017-01-14 09:12:41,388 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:12:42,221 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3RKPPXJ8', 'type': 'message', 'ts': '1484385161.000012', 'team': 'T3RH6Q9CJ', 'bot_id': 'B3QSW1ZG9', 'text': '_All commands_\n\n *Backup*\n _Backup related commands._\n• *!backup* - Backup everything.\n *ChatRoom*\n _This is a basic implementation of a chatroom_\n• *!room join* - Join (creating it first if needed) a chatroom.\n• *!room topic* - Get or set the topic for a room.\n• *!room invite* - Invite one or more people into a chatroom.\n• *!room list* - List chatrooms the bot has joined.\n• *!room occupants* - List the occupants in a given chatroom.\n• *!room create* - Create a chatroom.\n• *!room leave* - Leave a chatroom.\n• *!room destroy* - Destroy a chatroom.\n *Example*\n _This is a very basic plugin to try out your new installation and get you started.\n    Feel free to tweak me to experiment with Errbot.\n    You can find me in your init directory in the subdirectory plugins._\n• *!tryme* - Execute to check if Errbot responds to command.\n *Flows*\n _Management commands related to flows / conversations._\n• *!flows start* - Manually start a flow within the context of the calling user.\n• *!flows list* - Displays the list of setup flows.\n• *!flows stop* - Stop flows you are in.\n• *!flows kill* - usage: flows_kill [-h] user flow_name\n• *!flows show* - Shows the structure of a flow.\n• *!flows status* - Displays the list of started flows.\n *Health*\n _Core plugin for bot lifecycle and health related commands._\n• *!status gc* - shows the garbage collection details\n• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n• *!uptime* - Return the uptime of the bot\n• *!status plugins* - shows the plugin status\n• *!status* - If I am alive I should be able to respond to this one\n• *!restart* - Restart the bot.\n• *!status load* - shows the load status\n *Help*\n _Core plugin of help related functions._\n• *!help* - Returns a help string listing available options.\n• *!apropos* - Returns a help string listing available options.\n• *!about* - Return information about this Errbot instance and version\n *Plugins*\n _Commands to manage the plugins of the bot by chatting._\n• *!repos install* - install a plugin repository from the given source or a known public repo (see...\n• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...\n• *!plugin unblacklist* - Remove a plugin from the blacklist\n• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]\n• *!repos update* - update the bot and/or plugins\n• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...\n• *!plugin config* - configure or get the configuration / configuration template for a specific pl...\n• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]\n• *!repos uninstall* - uninstall a plugin repository by name.\n• *!repos search* - Searches the repo index.\n• *!repos* - list the current active plugin repositories\n *Utils*\n _Core Errbot utils commands._\n• *!echo* - A simple echo command. Useful for encoding tests etc ...\n• *!log tail* - Display a tail of the log of n lines or 40 by default\n• *!render test* - Tests / showcases the markdown rendering on your current backend\n• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...\n• *!history* - display the command history'}
+2017-01-14 09:12:42,222 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'B3QSW1ZG9',
+ 'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '_All commands_\n'
+         '\n'
+         ' *Backup*\n'
+         ' _Backup related commands._\n'
+         '• *!backup* - Backup everything.\n'
+         ' *ChatRoom*\n'
+         ' _This is a basic implementation of a chatroom_\n'
+         '• *!room join* - Join (creating it first if needed) a chatroom.\n'
+         '• *!room topic* - Get or set the topic for a room.\n'
+         '• *!room invite* - Invite one or more people into a chatroom.\n'
+         '• *!room list* - List chatrooms the bot has joined.\n'
+         '• *!room occupants* - List the occupants in a given chatroom.\n'
+         '• *!room create* - Create a chatroom.\n'
+         '• *!room leave* - Leave a chatroom.\n'
+         '• *!room destroy* - Destroy a chatroom.\n'
+         ' *Example*\n'
+         ' _This is a very basic plugin to try out your new installation and '
+         'get you started.\n'
+         '    Feel free to tweak me to experiment with Errbot.\n'
+         '    You can find me in your init directory in the subdirectory '
+         'plugins._\n'
+         '• *!tryme* - Execute to check if Errbot responds to command.\n'
+         ' *Flows*\n'
+         ' _Management commands related to flows / conversations._\n'
+         '• *!flows start* - Manually start a flow within the context of the '
+         'calling user.\n'
+         '• *!flows list* - Displays the list of setup flows.\n'
+         '• *!flows stop* - Stop flows you are in.\n'
+         '• *!flows kill* - usage: flows_kill [-h] user flow_name\n'
+         '• *!flows show* - Shows the structure of a flow.\n'
+         '• *!flows status* - Displays the list of started flows.\n'
+         ' *Health*\n'
+         ' _Core plugin for bot lifecycle and health related commands._\n'
+         '• *!status gc* - shows the garbage collection details\n'
+         '• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n'
+         '• *!uptime* - Return the uptime of the bot\n'
+         '• *!status plugins* - shows the plugin status\n'
+         '• *!status* - If I am alive I should be able to respond to this one\n'
+         '• *!restart* - Restart the bot.\n'
+         '• *!status load* - shows the load status\n'
+         ' *Help*\n'
+         ' _Core plugin of help related functions._\n'
+         '• *!help* - Returns a help string listing available options.\n'
+         '• *!apropos* - Returns a help string listing available options.\n'
+         '• *!about* - Return information about this Errbot instance and '
+         'version\n'
+         ' *Plugins*\n'
+         ' _Commands to manage the plugins of the bot by chatting._\n'
+         '• *!repos install* - install a plugin repository from the given '
+         'source or a known public repo (see...\n'
+         '• *!plugin blacklist* - Blacklist a plugin so that it will not be '
+         'loaded automatically during bot sta...\n'
+         '• *!plugin unblacklist* - Remove a plugin from the blacklist\n'
+         '• *!plugin activate* - activate a plugin. [calls .activate() on the '
+         'plugin]\n'
+         '• *!repos update* - update the bot and/or plugins\n'
+         '• *!plugin reload* - reload a plugin: reload the code of the plugin '
+         'leaving the activation status ...\n'
+         '• *!plugin config* - configure or get the configuration / '
+         'configuration template for a specific pl...\n'
+         '• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on '
+         'the plugin]\n'
+         '• *!repos uninstall* - uninstall a plugin repository by name.\n'
+         '• *!repos search* - Searches the repo index.\n'
+         '• *!repos* - list the current active plugin repositories\n'
+         ' *Utils*\n'
+         ' _Core Errbot utils commands._\n'
+         '• *!echo* - A simple echo command. Useful for encoding tests etc '
+         '...\n'
+         '• *!log tail* - Display a tail of the log of n lines or 40 by '
+         'default\n'
+         '• *!render test* - Tests / showcases the markdown rendering on your '
+         'current backend\n'
+         '• *!whoami* - A simple command echoing the details of your '
+         'identifier. Useful to debug iden...\n'
+         '• *!history* - display the command history',
+ 'ts': '1484385161.000012',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8'}
+2017-01-14 09:12:42,224 DEBUG    errbot.backends.slack     Escaped IDs event text: _All commands_
+
+ *Backup*
+ _Backup related commands._
+• *!backup* - Backup everything.
+ *ChatRoom*
+ _This is a basic implementation of a chatroom_
+• *!room join* - Join (creating it first if needed) a chatroom.
+• *!room topic* - Get or set the topic for a room.
+• *!room invite* - Invite one or more people into a chatroom.
+• *!room list* - List chatrooms the bot has joined.
+• *!room occupants* - List the occupants in a given chatroom.
+• *!room create* - Create a chatroom.
+• *!room leave* - Leave a chatroom.
+• *!room destroy* - Destroy a chatroom.
+ *Example*
+ _This is a very basic plugin to try out your new installation and get you started.
+    Feel free to tweak me to experiment with Errbot.
+    You can find me in your init directory in the subdirectory plugins._
+• *!tryme* - Execute to check if Errbot responds to command.
+ *Flows*
+ _Management commands related to flows / conversations._
+• *!flows start* - Manually start a flow within the context of the calling user.
+• *!flows list* - Displays the list of setup flows.
+• *!flows stop* - Stop flows you are in.
+• *!flows kill* - usage: flows_kill [-h] user flow_name
+• *!flows show* - Shows the structure of a flow.
+• *!flows status* - Displays the list of started flows.
+ *Health*
+ _Core plugin for bot lifecycle and health related commands._
+• *!status gc* - shows the garbage collection details
+• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]
+• *!uptime* - Return the uptime of the bot
+• *!status plugins* - shows the plugin status
+• *!status* - If I am alive I should be able to respond to this one
+• *!restart* - Restart the bot.
+• *!status load* - shows the load status
+ *Help*
+ _Core plugin of help related functions._
+• *!help* - Returns a help string listing available options.
+• *!apropos* - Returns a help string listing available options.
+• *!about* - Return information about this Errbot instance and version
+ *Plugins*
+ _Commands to manage the plugins of the bot by chatting._
+• *!repos install* - install a plugin repository from the given source or a known public repo (see...
+• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...
+• *!plugin unblacklist* - Remove a plugin from the blacklist
+• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]
+• *!repos update* - update the bot and/or plugins
+• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...
+• *!plugin config* - configure or get the configuration / configuration template for a specific pl...
+• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]
+• *!repos uninstall* - uninstall a plugin repository by name.
+• *!repos search* - Searches the repo index.
+• *!repos* - list the current active plugin repositories
+ *Utils*
+ _Core Errbot utils commands._
+• *!echo* - A simple echo command. Useful for encoding tests etc ...
+• *!log tail* - Display a tail of the log of n lines or 40 by default
+• *!render test* - Tests / showcases the markdown rendering on your current backend
+• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...
+• *!history* - display the command history
+2017-01-14 09:12:42,226 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:12:42,262 DEBUG    requests.packages.urllib3.connectionpool "POST /api/chat.postMessage HTTP/1.1" 200 1439
+2017-01-14 09:12:42,265 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:12:42,265 DEBUG    errbot.flow               None matched.
+2017-01-14 09:12:42,266 DEBUG    errbot.flow               Test if the command help is an auto-trigger for any flow ...
+2017-01-14 09:12:50,632 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:12:51,598 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3QSNED8R', 'type': 'message', 'team': 'T3RH6Q9CJ', 'ts': '1484385171.000013', 'text': '!help'}
+2017-01-14 09:12:51,599 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '!help',
+ 'ts': '1484385171.000013',
+ 'type': 'message',
+ 'user': 'U3QSNED8R'}
+2017-01-14 09:12:51,599 DEBUG    errbot.backends.slack     Escaped IDs event text: !help
+2017-01-14 09:12:51,599 DEBUG    errbot.core               *** frm = #random/sanjog
+2017-01-14 09:12:51,600 DEBUG    errbot.core               *** username = @sanjog
+2017-01-14 09:12:51,600 DEBUG    errbot.core               *** text = !help
+2017-01-14 09:12:51,600 DEBUG    errbot.plugins.ACLS       Check help for ACLs.
+2017-01-14 09:12:51,601 INFO     errbot.plugins.ACLS       Matching ACL {} against username @sanjog for command Help:help
+2017-01-14 09:12:51,601 INFO     errbot.plugins.ACLS       Check if help is admin only command.
+2017-01-14 09:12:51,601 INFO     errbot.core               Processing command 'help' with parameters '' from #random/sanjog
+2017-01-14 09:12:51,602 DEBUG    errbot.core               Triggering callback_message on Backup
+2017-01-14 09:12:51,602 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:12:51,602 DEBUG    errbot.core               Triggering callback_message on ACLS
+2017-01-14 09:12:51,602 DEBUG    errbot.flow               None matched.
+2017-01-14 09:12:51,603 DEBUG    errbot.core               Triggering callback_message on Help
+2017-01-14 09:12:51,604 DEBUG    errbot.backends.slack     Sending channel message to random (C3RF6HTL3)
+2017-01-14 09:12:51,605 DEBUG    errbot.core               Triggering callback_message on Utils
+2017-01-14 09:12:51,615 DEBUG    errbot.core               Triggering callback_message on VersionChecker
+2017-01-14 09:12:51,615 DEBUG    errbot.core               Triggering callback_message on ChatRoom
+2017-01-14 09:12:51,615 DEBUG    errbot.core               Triggering callback_message on Health
+2017-01-14 09:12:51,616 DEBUG    errbot.core               Triggering callback_message on Plugins
+2017-01-14 09:12:51,616 DEBUG    errbot.core               Triggering callback_message on Flows
+2017-01-14 09:12:51,616 DEBUG    errbot.core               Triggering callback_message on Example
+2017-01-14 09:12:51,619 DEBUG    errbot.backends.slack     Message size: 3206
+2017-01-14 09:12:51,621 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:12:52,903 DEBUG    requests.packages.urllib3.connectionpool "POST /api/chat.postMessage HTTP/1.1" 200 1439
+2017-01-14 09:12:52,908 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:12:52,905 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3RKPPXJ8', 'type': 'message', 'ts': '1484385172.000014', 'team': 'T3RH6Q9CJ', 'bot_id': 'B3QSW1ZG9', 'text': '_All commands_\n\n *Backup*\n _Backup related commands._\n• *!backup* - Backup everything.\n *ChatRoom*\n _This is a basic implementation of a chatroom_\n• *!room join* - Join (creating it first if needed) a chatroom.\n• *!room topic* - Get or set the topic for a room.\n• *!room invite* - Invite one or more people into a chatroom.\n• *!room list* - List chatrooms the bot has joined.\n• *!room occupants* - List the occupants in a given chatroom.\n• *!room create* - Create a chatroom.\n• *!room leave* - Leave a chatroom.\n• *!room destroy* - Destroy a chatroom.\n *Example*\n _This is a very basic plugin to try out your new installation and get you started.\n    Feel free to tweak me to experiment with Errbot.\n    You can find me in your init directory in the subdirectory plugins._\n• *!tryme* - Execute to check if Errbot responds to command.\n *Flows*\n _Management commands related to flows / conversations._\n• *!flows start* - Manually start a flow within the context of the calling user.\n• *!flows list* - Displays the list of setup flows.\n• *!flows stop* - Stop flows you are in.\n• *!flows kill* - usage: flows_kill [-h] user flow_name\n• *!flows show* - Shows the structure of a flow.\n• *!flows status* - Displays the list of started flows.\n *Health*\n _Core plugin for bot lifecycle and health related commands._\n• *!status gc* - shows the garbage collection details\n• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n• *!uptime* - Return the uptime of the bot\n• *!status plugins* - shows the plugin status\n• *!status* - If I am alive I should be able to respond to this one\n• *!restart* - Restart the bot.\n• *!status load* - shows the load status\n *Help*\n _Core plugin of help related functions._\n• *!help* - Returns a help string listing available options.\n• *!apropos* - Returns a help string listing available options.\n• *!about* - Return information about this Errbot instance and version\n *Plugins*\n _Commands to manage the plugins of the bot by chatting._\n• *!repos install* - install a plugin repository from the given source or a known public repo (see...\n• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...\n• *!plugin unblacklist* - Remove a plugin from the blacklist\n• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]\n• *!repos update* - update the bot and/or plugins\n• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...\n• *!plugin config* - configure or get the configuration / configuration template for a specific pl...\n• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]\n• *!repos uninstall* - uninstall a plugin repository by name.\n• *!repos search* - Searches the repo index.\n• *!repos* - list the current active plugin repositories\n *Utils*\n _Core Errbot utils commands._\n• *!echo* - A simple echo command. Useful for encoding tests etc ...\n• *!log tail* - Display a tail of the log of n lines or 40 by default\n• *!render test* - Tests / showcases the markdown rendering on your current backend\n• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...\n• *!history* - display the command history'}
+2017-01-14 09:12:52,909 DEBUG    errbot.flow               None matched.
+2017-01-14 09:12:52,910 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'B3QSW1ZG9',
+ 'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '_All commands_\n'
+         '\n'
+         ' *Backup*\n'
+         ' _Backup related commands._\n'
+         '• *!backup* - Backup everything.\n'
+         ' *ChatRoom*\n'
+         ' _This is a basic implementation of a chatroom_\n'
+         '• *!room join* - Join (creating it first if needed) a chatroom.\n'
+         '• *!room topic* - Get or set the topic for a room.\n'
+         '• *!room invite* - Invite one or more people into a chatroom.\n'
+         '• *!room list* - List chatrooms the bot has joined.\n'
+         '• *!room occupants* - List the occupants in a given chatroom.\n'
+         '• *!room create* - Create a chatroom.\n'
+         '• *!room leave* - Leave a chatroom.\n'
+         '• *!room destroy* - Destroy a chatroom.\n'
+         ' *Example*\n'
+         ' _This is a very basic plugin to try out your new installation and '
+         'get you started.\n'
+         '    Feel free to tweak me to experiment with Errbot.\n'
+         '    You can find me in your init directory in the subdirectory '
+         'plugins._\n'
+         '• *!tryme* - Execute to check if Errbot responds to command.\n'
+         ' *Flows*\n'
+         ' _Management commands related to flows / conversations._\n'
+         '• *!flows start* - Manually start a flow within the context of the '
+         'calling user.\n'
+         '• *!flows list* - Displays the list of setup flows.\n'
+         '• *!flows stop* - Stop flows you are in.\n'
+         '• *!flows kill* - usage: flows_kill [-h] user flow_name\n'
+         '• *!flows show* - Shows the structure of a flow.\n'
+         '• *!flows status* - Displays the list of started flows.\n'
+         ' *Health*\n'
+         ' _Core plugin for bot lifecycle and health related commands._\n'
+         '• *!status gc* - shows the garbage collection details\n'
+         '• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n'
+         '• *!uptime* - Return the uptime of the bot\n'
+         '• *!status plugins* - shows the plugin status\n'
+         '• *!status* - If I am alive I should be able to respond to this one\n'
+         '• *!restart* - Restart the bot.\n'
+         '• *!status load* - shows the load status\n'
+         ' *Help*\n'
+         ' _Core plugin of help related functions._\n'
+         '• *!help* - Returns a help string listing available options.\n'
+         '• *!apropos* - Returns a help string listing available options.\n'
+         '• *!about* - Return information about this Errbot instance and '
+         'version\n'
+         ' *Plugins*\n'
+         ' _Commands to manage the plugins of the bot by chatting._\n'
+         '• *!repos install* - install a plugin repository from the given '
+         'source or a known public repo (see...\n'
+         '• *!plugin blacklist* - Blacklist a plugin so that it will not be '
+         'loaded automatically during bot sta...\n'
+         '• *!plugin unblacklist* - Remove a plugin from the blacklist\n'
+         '• *!plugin activate* - activate a plugin. [calls .activate() on the '
+         'plugin]\n'
+         '• *!repos update* - update the bot and/or plugins\n'
+         '• *!plugin reload* - reload a plugin: reload the code of the plugin '
+         'leaving the activation status ...\n'
+         '• *!plugin config* - configure or get the configuration / '
+         'configuration template for a specific pl...\n'
+         '• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on '
+         'the plugin]\n'
+         '• *!repos uninstall* - uninstall a plugin repository by name.\n'
+         '• *!repos search* - Searches the repo index.\n'
+         '• *!repos* - list the current active plugin repositories\n'
+         ' *Utils*\n'
+         ' _Core Errbot utils commands._\n'
+         '• *!echo* - A simple echo command. Useful for encoding tests etc '
+         '...\n'
+         '• *!log tail* - Display a tail of the log of n lines or 40 by '
+         'default\n'
+         '• *!render test* - Tests / showcases the markdown rendering on your '
+         'current backend\n'
+         '• *!whoami* - A simple command echoing the details of your '
+         'identifier. Useful to debug iden...\n'
+         '• *!history* - display the command history',
+ 'ts': '1484385172.000014',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8'}
+2017-01-14 09:12:52,912 DEBUG    errbot.flow               Test if the command help is an auto-trigger for any flow ...
+2017-01-14 09:12:52,912 DEBUG    errbot.backends.slack     Escaped IDs event text: _All commands_
+
+ *Backup*
+ _Backup related commands._
+• *!backup* - Backup everything.
+ *ChatRoom*
+ _This is a basic implementation of a chatroom_
+• *!room join* - Join (creating it first if needed) a chatroom.
+• *!room topic* - Get or set the topic for a room.
+• *!room invite* - Invite one or more people into a chatroom.
+• *!room list* - List chatrooms the bot has joined.
+• *!room occupants* - List the occupants in a given chatroom.
+• *!room create* - Create a chatroom.
+• *!room leave* - Leave a chatroom.
+• *!room destroy* - Destroy a chatroom.
+ *Example*
+ _This is a very basic plugin to try out your new installation and get you started.
+    Feel free to tweak me to experiment with Errbot.
+    You can find me in your init directory in the subdirectory plugins._
+• *!tryme* - Execute to check if Errbot responds to command.
+ *Flows*
+ _Management commands related to flows / conversations._
+• *!flows start* - Manually start a flow within the context of the calling user.
+• *!flows list* - Displays the list of setup flows.
+• *!flows stop* - Stop flows you are in.
+• *!flows kill* - usage: flows_kill [-h] user flow_name
+• *!flows show* - Shows the structure of a flow.
+• *!flows status* - Displays the list of started flows.
+ *Health*
+ _Core plugin for bot lifecycle and health related commands._
+• *!status gc* - shows the garbage collection details
+• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]
+• *!uptime* - Return the uptime of the bot
+• *!status plugins* - shows the plugin status
+• *!status* - If I am alive I should be able to respond to this one
+• *!restart* - Restart the bot.
+• *!status load* - shows the load status
+ *Help*
+ _Core plugin of help related functions._
+• *!help* - Returns a help string listing available options.
+• *!apropos* - Returns a help string listing available options.
+• *!about* - Return information about this Errbot instance and version
+ *Plugins*
+ _Commands to manage the plugins of the bot by chatting._
+• *!repos install* - install a plugin repository from the given source or a known public repo (see...
+• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...
+• *!plugin unblacklist* - Remove a plugin from the blacklist
+• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]
+• *!repos update* - update the bot and/or plugins
+• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...
+• *!plugin config* - configure or get the configuration / configuration template for a specific pl...
+• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]
+• *!repos uninstall* - uninstall a plugin repository by name.
+• *!repos search* - Searches the repo index.
+• *!repos* - list the current active plugin repositories
+ *Utils*
+ _Core Errbot utils commands._
+• *!echo* - A simple echo command. Useful for encoding tests etc ...
+• *!log tail* - Display a tail of the log of n lines or 40 by default
+• *!render test* - Tests / showcases the markdown rendering on your current backend
+• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...
+• *!history* - display the command history
+2017-01-14 09:12:52,913 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:13:19,751 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:13:22,941 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:13:23,705 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3RH6Q9D0', 'type': 'message', 'team': 'T3RH6Q9CJ', 'ts': '1484385203.000015', 'text': 'atraey help'}
+2017-01-14 09:13:23,706 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': 'atraey help',
+ 'ts': '1484385203.000015',
+ 'type': 'message',
+ 'user': 'U3RH6Q9D0'}
+2017-01-14 09:13:23,706 DEBUG    errbot.backends.slack     Escaped IDs event text: atraey help
+2017-01-14 09:13:23,706 DEBUG    errbot.core               *** frm = #random/debojkakoti88
+2017-01-14 09:13:23,707 DEBUG    errbot.core               *** username = @debojkakoti88
+2017-01-14 09:13:23,707 DEBUG    errbot.core               *** text = atraey help
+2017-01-14 09:13:23,707 DEBUG    errbot.core               Called with alternate prefix 'atraey'
+2017-01-14 09:13:23,707 DEBUG    errbot.plugins.ACLS       Check help for ACLs.
+2017-01-14 09:13:23,708 INFO     errbot.plugins.ACLS       Matching ACL {} against username @debojkakoti88 for command Help:help
+2017-01-14 09:13:23,708 INFO     errbot.plugins.ACLS       Check if help is admin only command.
+2017-01-14 09:13:23,708 INFO     errbot.core               Processing command 'help' with parameters '' from #random/debojkakoti88
+2017-01-14 09:13:23,709 DEBUG    errbot.core               Triggering callback_message on Backup
+2017-01-14 09:13:23,709 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:13:23,709 DEBUG    errbot.core               Triggering callback_message on ACLS
+2017-01-14 09:13:23,709 DEBUG    errbot.flow               None matched.
+2017-01-14 09:13:23,710 DEBUG    errbot.core               Triggering callback_message on Help
+2017-01-14 09:13:23,711 DEBUG    errbot.backends.slack     Sending channel message to random (C3RF6HTL3)
+2017-01-14 09:13:23,711 DEBUG    errbot.core               Triggering callback_message on Utils
+2017-01-14 09:13:23,723 DEBUG    errbot.core               Triggering callback_message on VersionChecker
+2017-01-14 09:13:23,723 DEBUG    errbot.core               Triggering callback_message on ChatRoom
+2017-01-14 09:13:23,723 DEBUG    errbot.core               Triggering callback_message on Health
+2017-01-14 09:13:23,723 DEBUG    errbot.core               Triggering callback_message on Plugins
+2017-01-14 09:13:23,724 DEBUG    errbot.core               Triggering callback_message on Flows
+2017-01-14 09:13:23,724 DEBUG    errbot.core               Triggering callback_message on Example
+2017-01-14 09:13:23,725 DEBUG    errbot.backends.slack     Message size: 3206
+2017-01-14 09:13:23,727 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:13:23,968 DEBUG    errbot.backends.slack     No event handler available for desktop_notification, ignoring this event
+2017-01-14 09:13:24,559 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3RKPPXJ8', 'type': 'message', 'ts': '1484385204.000016', 'team': 'T3RH6Q9CJ', 'bot_id': 'B3QSW1ZG9', 'text': '_All commands_\n\n *Backup*\n _Backup related commands._\n• *!backup* - Backup everything.\n *ChatRoom*\n _This is a basic implementation of a chatroom_\n• *!room join* - Join (creating it first if needed) a chatroom.\n• *!room topic* - Get or set the topic for a room.\n• *!room invite* - Invite one or more people into a chatroom.\n• *!room list* - List chatrooms the bot has joined.\n• *!room occupants* - List the occupants in a given chatroom.\n• *!room create* - Create a chatroom.\n• *!room leave* - Leave a chatroom.\n• *!room destroy* - Destroy a chatroom.\n *Example*\n _This is a very basic plugin to try out your new installation and get you started.\n    Feel free to tweak me to experiment with Errbot.\n    You can find me in your init directory in the subdirectory plugins._\n• *!tryme* - Execute to check if Errbot responds to command.\n *Flows*\n _Management commands related to flows / conversations._\n• *!flows start* - Manually start a flow within the context of the calling user.\n• *!flows list* - Displays the list of setup flows.\n• *!flows stop* - Stop flows you are in.\n• *!flows kill* - usage: flows_kill [-h] user flow_name\n• *!flows show* - Shows the structure of a flow.\n• *!flows status* - Displays the list of started flows.\n *Health*\n _Core plugin for bot lifecycle and health related commands._\n• *!status gc* - shows the garbage collection details\n• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n• *!uptime* - Return the uptime of the bot\n• *!status plugins* - shows the plugin status\n• *!status* - If I am alive I should be able to respond to this one\n• *!restart* - Restart the bot.\n• *!status load* - shows the load status\n *Help*\n _Core plugin of help related functions._\n• *!help* - Returns a help string listing available options.\n• *!apropos* - Returns a help string listing available options.\n• *!about* - Return information about this Errbot instance and version\n *Plugins*\n _Commands to manage the plugins of the bot by chatting._\n• *!repos install* - install a plugin repository from the given source or a known public repo (see...\n• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...\n• *!plugin unblacklist* - Remove a plugin from the blacklist\n• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]\n• *!repos update* - update the bot and/or plugins\n• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...\n• *!plugin config* - configure or get the configuration / configuration template for a specific pl...\n• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]\n• *!repos uninstall* - uninstall a plugin repository by name.\n• *!repos search* - Searches the repo index.\n• *!repos* - list the current active plugin repositories\n *Utils*\n _Core Errbot utils commands._\n• *!echo* - A simple echo command. Useful for encoding tests etc ...\n• *!log tail* - Display a tail of the log of n lines or 40 by default\n• *!render test* - Tests / showcases the markdown rendering on your current backend\n• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...\n• *!history* - display the command history'}
+2017-01-14 09:13:24,560 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'B3QSW1ZG9',
+ 'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '_All commands_\n'
+         '\n'
+         ' *Backup*\n'
+         ' _Backup related commands._\n'
+         '• *!backup* - Backup everything.\n'
+         ' *ChatRoom*\n'
+         ' _This is a basic implementation of a chatroom_\n'
+         '• *!room join* - Join (creating it first if needed) a chatroom.\n'
+         '• *!room topic* - Get or set the topic for a room.\n'
+         '• *!room invite* - Invite one or more people into a chatroom.\n'
+         '• *!room list* - List chatrooms the bot has joined.\n'
+         '• *!room occupants* - List the occupants in a given chatroom.\n'
+         '• *!room create* - Create a chatroom.\n'
+         '• *!room leave* - Leave a chatroom.\n'
+         '• *!room destroy* - Destroy a chatroom.\n'
+         ' *Example*\n'
+         ' _This is a very basic plugin to try out your new installation and '
+         'get you started.\n'
+         '    Feel free to tweak me to experiment with Errbot.\n'
+         '    You can find me in your init directory in the subdirectory '
+         'plugins._\n'
+         '• *!tryme* - Execute to check if Errbot responds to command.\n'
+         ' *Flows*\n'
+         ' _Management commands related to flows / conversations._\n'
+         '• *!flows start* - Manually start a flow within the context of the '
+         'calling user.\n'
+         '• *!flows list* - Displays the list of setup flows.\n'
+         '• *!flows stop* - Stop flows you are in.\n'
+         '• *!flows kill* - usage: flows_kill [-h] user flow_name\n'
+         '• *!flows show* - Shows the structure of a flow.\n'
+         '• *!flows status* - Displays the list of started flows.\n'
+         ' *Health*\n'
+         ' _Core plugin for bot lifecycle and health related commands._\n'
+         '• *!status gc* - shows the garbage collection details\n'
+         '• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n'
+         '• *!uptime* - Return the uptime of the bot\n'
+         '• *!status plugins* - shows the plugin status\n'
+         '• *!status* - If I am alive I should be able to respond to this one\n'
+         '• *!restart* - Restart the bot.\n'
+         '• *!status load* - shows the load status\n'
+         ' *Help*\n'
+         ' _Core plugin of help related functions._\n'
+         '• *!help* - Returns a help string listing available options.\n'
+         '• *!apropos* - Returns a help string listing available options.\n'
+         '• *!about* - Return information about this Errbot instance and '
+         'version\n'
+         ' *Plugins*\n'
+         ' _Commands to manage the plugins of the bot by chatting._\n'
+         '• *!repos install* - install a plugin repository from the given '
+         'source or a known public repo (see...\n'
+         '• *!plugin blacklist* - Blacklist a plugin so that it will not be '
+         'loaded automatically during bot sta...\n'
+         '• *!plugin unblacklist* - Remove a plugin from the blacklist\n'
+         '• *!plugin activate* - activate a plugin. [calls .activate() on the '
+         'plugin]\n'
+         '• *!repos update* - update the bot and/or plugins\n'
+         '• *!plugin reload* - reload a plugin: reload the code of the plugin '
+         'leaving the activation status ...\n'
+         '• *!plugin config* - configure or get the configuration / '
+         'configuration template for a specific pl...\n'
+         '• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on '
+         'the plugin]\n'
+         '• *!repos uninstall* - uninstall a plugin repository by name.\n'
+         '• *!repos search* - Searches the repo index.\n'
+         '• *!repos* - list the current active plugin repositories\n'
+         ' *Utils*\n'
+         ' _Core Errbot utils commands._\n'
+         '• *!echo* - A simple echo command. Useful for encoding tests etc '
+         '...\n'
+         '• *!log tail* - Display a tail of the log of n lines or 40 by '
+         'default\n'
+         '• *!render test* - Tests / showcases the markdown rendering on your '
+         'current backend\n'
+         '• *!whoami* - A simple command echoing the details of your '
+         'identifier. Useful to debug iden...\n'
+         '• *!history* - display the command history',
+ 'ts': '1484385204.000016',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8'}
+2017-01-14 09:13:24,562 DEBUG    errbot.backends.slack     Escaped IDs event text: _All commands_
+
+ *Backup*
+ _Backup related commands._
+• *!backup* - Backup everything.
+ *ChatRoom*
+ _This is a basic implementation of a chatroom_
+• *!room join* - Join (creating it first if needed) a chatroom.
+• *!room topic* - Get or set the topic for a room.
+• *!room invite* - Invite one or more people into a chatroom.
+• *!room list* - List chatrooms the bot has joined.
+• *!room occupants* - List the occupants in a given chatroom.
+• *!room create* - Create a chatroom.
+• *!room leave* - Leave a chatroom.
+• *!room destroy* - Destroy a chatroom.
+ *Example*
+ _This is a very basic plugin to try out your new installation and get you started.
+    Feel free to tweak me to experiment with Errbot.
+    You can find me in your init directory in the subdirectory plugins._
+• *!tryme* - Execute to check if Errbot responds to command.
+ *Flows*
+ _Management commands related to flows / conversations._
+• *!flows start* - Manually start a flow within the context of the calling user.
+• *!flows list* - Displays the list of setup flows.
+• *!flows stop* - Stop flows you are in.
+• *!flows kill* - usage: flows_kill [-h] user flow_name
+• *!flows show* - Shows the structure of a flow.
+• *!flows status* - Displays the list of started flows.
+ *Health*
+ _Core plugin for bot lifecycle and health related commands._
+• *!status gc* - shows the garbage collection details
+• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]
+• *!uptime* - Return the uptime of the bot
+• *!status plugins* - shows the plugin status
+• *!status* - If I am alive I should be able to respond to this one
+• *!restart* - Restart the bot.
+• *!status load* - shows the load status
+ *Help*
+ _Core plugin of help related functions._
+• *!help* - Returns a help string listing available options.
+• *!apropos* - Returns a help string listing available options.
+• *!about* - Return information about this Errbot instance and version
+ *Plugins*
+ _Commands to manage the plugins of the bot by chatting._
+• *!repos install* - install a plugin repository from the given source or a known public repo (see...
+• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...
+• *!plugin unblacklist* - Remove a plugin from the blacklist
+• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]
+• *!repos update* - update the bot and/or plugins
+• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...
+• *!plugin config* - configure or get the configuration / configuration template for a specific pl...
+• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]
+• *!repos uninstall* - uninstall a plugin repository by name.
+• *!repos search* - Searches the repo index.
+• *!repos* - list the current active plugin repositories
+ *Utils*
+ _Core Errbot utils commands._
+• *!echo* - A simple echo command. Useful for encoding tests etc ...
+• *!log tail* - Display a tail of the log of n lines or 40 by default
+• *!render test* - Tests / showcases the markdown rendering on your current backend
+• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...
+• *!history* - display the command history
+2017-01-14 09:13:24,564 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:13:24,603 DEBUG    requests.packages.urllib3.connectionpool "POST /api/chat.postMessage HTTP/1.1" 200 1439
+2017-01-14 09:13:24,606 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:13:24,606 DEBUG    errbot.flow               None matched.
+2017-01-14 09:13:24,606 DEBUG    errbot.flow               Test if the command help is an auto-trigger for any flow ...
+2017-01-14 09:13:25,236 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:13:28,724 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:13:29,956 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3QSNED8R', 'type': 'message', 'team': 'T3RH6Q9CJ', 'ts': '1484385209.000017', 'text': 'atraey !help'}
+2017-01-14 09:13:29,957 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': 'atraey !help',
+ 'ts': '1484385209.000017',
+ 'type': 'message',
+ 'user': 'U3QSNED8R'}
+2017-01-14 09:13:29,957 DEBUG    errbot.backends.slack     Escaped IDs event text: atraey !help
+2017-01-14 09:13:29,957 DEBUG    errbot.core               *** frm = #random/sanjog
+2017-01-14 09:13:29,958 DEBUG    errbot.core               *** username = @sanjog
+2017-01-14 09:13:29,958 DEBUG    errbot.core               *** text = atraey !help
+2017-01-14 09:13:29,958 DEBUG    errbot.core               Called with alternate prefix 'atraey'
+2017-01-14 09:13:29,958 DEBUG    errbot.core               Command not found
+2017-01-14 09:13:29,959 DEBUG    errbot.backends.slack     Sending channel message to random (C3RF6HTL3)
+2017-01-14 09:13:29,960 DEBUG    errbot.backends.slack     Message size: 50
+2017-01-14 09:13:29,962 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:13:30,821 DEBUG    requests.packages.urllib3.connectionpool "POST /api/chat.postMessage HTTP/1.1" 200 183
+2017-01-14 09:13:30,825 DEBUG    errbot.core               Triggering callback_message on Backup
+2017-01-14 09:13:30,826 DEBUG    errbot.core               Triggering callback_message on ACLS
+2017-01-14 09:13:30,826 DEBUG    errbot.core               Triggering callback_message on Help
+2017-01-14 09:13:30,826 DEBUG    errbot.core               Triggering callback_message on Utils
+2017-01-14 09:13:30,826 DEBUG    errbot.core               Triggering callback_message on VersionChecker
+2017-01-14 09:13:30,827 DEBUG    errbot.core               Triggering callback_message on ChatRoom
+2017-01-14 09:13:30,827 DEBUG    errbot.core               Triggering callback_message on Health
+2017-01-14 09:13:30,827 DEBUG    errbot.core               Triggering callback_message on Plugins
+2017-01-14 09:13:30,827 DEBUG    errbot.core               Triggering callback_message on Flows
+2017-01-14 09:13:30,828 DEBUG    errbot.core               Triggering callback_message on Example
+2017-01-14 09:13:30,828 DEBUG    errbot.backends.slack     No event handler available for desktop_notification, ignoring this event
+2017-01-14 09:13:30,829 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3RKPPXJ8', 'type': 'message', 'ts': '1484385210.000018', 'team': 'T3RH6Q9CJ', 'bot_id': 'B3QSW1ZG9', 'text': 'Command "!help" not found.\n Did you mean "!help" ?'}
+2017-01-14 09:13:30,829 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'B3QSW1ZG9',
+ 'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': 'Command "!help" not found.\n Did you mean "!help" ?',
+ 'ts': '1484385210.000018',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8'}
+2017-01-14 09:13:30,830 DEBUG    errbot.backends.slack     Escaped IDs event text: Command "!help" not found.
+ Did you mean "!help" ?
+2017-01-14 09:13:30,830 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:13:49,565 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:13:52,573 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2017-01-14 09:13:53,487 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3QSNED8R', 'type': 'message', 'team': 'T3RH6Q9CJ', 'ts': '1484385233.000019', 'text': 'atraey help'}
+2017-01-14 09:13:53,488 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': 'atraey help',
+ 'ts': '1484385233.000019',
+ 'type': 'message',
+ 'user': 'U3QSNED8R'}
+2017-01-14 09:13:53,489 DEBUG    errbot.backends.slack     Escaped IDs event text: atraey help
+2017-01-14 09:13:53,489 DEBUG    errbot.core               *** frm = #random/sanjog
+2017-01-14 09:13:53,489 DEBUG    errbot.core               *** username = @sanjog
+2017-01-14 09:13:53,489 DEBUG    errbot.core               *** text = atraey help
+2017-01-14 09:13:53,490 DEBUG    errbot.core               Called with alternate prefix 'atraey'
+2017-01-14 09:13:53,490 DEBUG    errbot.plugins.ACLS       Check help for ACLs.
+2017-01-14 09:13:53,490 INFO     errbot.plugins.ACLS       Matching ACL {} against username @sanjog for command Help:help
+2017-01-14 09:13:53,490 INFO     errbot.plugins.ACLS       Check if help is admin only command.
+2017-01-14 09:13:53,491 INFO     errbot.core               Processing command 'help' with parameters '' from #random/sanjog
+2017-01-14 09:13:53,491 DEBUG    errbot.core               Triggering callback_message on Backup
+2017-01-14 09:13:53,491 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:13:53,492 DEBUG    errbot.core               Triggering callback_message on ACLS
+2017-01-14 09:13:53,492 DEBUG    errbot.flow               None matched.
+2017-01-14 09:13:53,492 DEBUG    errbot.core               Triggering callback_message on Help
+2017-01-14 09:13:53,493 DEBUG    errbot.backends.slack     Sending channel message to random (C3RF6HTL3)
+2017-01-14 09:13:53,494 DEBUG    errbot.core               Triggering callback_message on Utils
+2017-01-14 09:13:53,503 DEBUG    errbot.core               Triggering callback_message on VersionChecker
+2017-01-14 09:13:53,503 DEBUG    errbot.core               Triggering callback_message on ChatRoom
+2017-01-14 09:13:53,503 DEBUG    errbot.core               Triggering callback_message on Health
+2017-01-14 09:13:53,503 DEBUG    errbot.core               Triggering callback_message on Plugins
+2017-01-14 09:13:53,504 DEBUG    errbot.core               Triggering callback_message on Flows
+2017-01-14 09:13:53,504 DEBUG    errbot.core               Triggering callback_message on Example
+2017-01-14 09:13:53,507 DEBUG    errbot.backends.slack     Message size: 3206
+2017-01-14 09:13:53,510 INFO     requests.packages.urllib3.connectionpool Starting new HTTPS connection (1): slack.com
+2017-01-14 09:13:53,751 DEBUG    errbot.backends.slack     No event handler available for desktop_notification, ignoring this event
+2017-01-14 09:13:54,723 DEBUG    errbot.backends.slack     Processing slack event: {'channel': 'C3RF6HTL3', 'user': 'U3RKPPXJ8', 'type': 'message', 'ts': '1484385234.000020', 'team': 'T3RH6Q9CJ', 'bot_id': 'B3QSW1ZG9', 'text': '_All commands_\n\n *Backup*\n _Backup related commands._\n• *!backup* - Backup everything.\n *ChatRoom*\n _This is a basic implementation of a chatroom_\n• *!room join* - Join (creating it first if needed) a chatroom.\n• *!room topic* - Get or set the topic for a room.\n• *!room invite* - Invite one or more people into a chatroom.\n• *!room list* - List chatrooms the bot has joined.\n• *!room occupants* - List the occupants in a given chatroom.\n• *!room create* - Create a chatroom.\n• *!room leave* - Leave a chatroom.\n• *!room destroy* - Destroy a chatroom.\n *Example*\n _This is a very basic plugin to try out your new installation and get you started.\n    Feel free to tweak me to experiment with Errbot.\n    You can find me in your init directory in the subdirectory plugins._\n• *!tryme* - Execute to check if Errbot responds to command.\n *Flows*\n _Management commands related to flows / conversations._\n• *!flows start* - Manually start a flow within the context of the calling user.\n• *!flows list* - Displays the list of setup flows.\n• *!flows stop* - Stop flows you are in.\n• *!flows kill* - usage: flows_kill [-h] user flow_name\n• *!flows show* - Shows the structure of a flow.\n• *!flows status* - Displays the list of started flows.\n *Health*\n _Core plugin for bot lifecycle and health related commands._\n• *!status gc* - shows the garbage collection details\n• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n• *!uptime* - Return the uptime of the bot\n• *!status plugins* - shows the plugin status\n• *!status* - If I am alive I should be able to respond to this one\n• *!restart* - Restart the bot.\n• *!status load* - shows the load status\n *Help*\n _Core plugin of help related functions._\n• *!help* - Returns a help string listing available options.\n• *!apropos* - Returns a help string listing available options.\n• *!about* - Return information about this Errbot instance and version\n *Plugins*\n _Commands to manage the plugins of the bot by chatting._\n• *!repos install* - install a plugin repository from the given source or a known public repo (see...\n• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...\n• *!plugin unblacklist* - Remove a plugin from the blacklist\n• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]\n• *!repos update* - update the bot and/or plugins\n• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...\n• *!plugin config* - configure or get the configuration / configuration template for a specific pl...\n• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]\n• *!repos uninstall* - uninstall a plugin repository by name.\n• *!repos search* - Searches the repo index.\n• *!repos* - list the current active plugin repositories\n *Utils*\n _Core Errbot utils commands._\n• *!echo* - A simple echo command. Useful for encoding tests etc ...\n• *!log tail* - Display a tail of the log of n lines or 40 by default\n• *!render test* - Tests / showcases the markdown rendering on your current backend\n• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...\n• *!history* - display the command history'}
+2017-01-14 09:13:54,725 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'B3QSW1ZG9',
+ 'channel': 'C3RF6HTL3',
+ 'team': 'T3RH6Q9CJ',
+ 'text': '_All commands_\n'
+         '\n'
+         ' *Backup*\n'
+         ' _Backup related commands._\n'
+         '• *!backup* - Backup everything.\n'
+         ' *ChatRoom*\n'
+         ' _This is a basic implementation of a chatroom_\n'
+         '• *!room join* - Join (creating it first if needed) a chatroom.\n'
+         '• *!room topic* - Get or set the topic for a room.\n'
+         '• *!room invite* - Invite one or more people into a chatroom.\n'
+         '• *!room list* - List chatrooms the bot has joined.\n'
+         '• *!room occupants* - List the occupants in a given chatroom.\n'
+         '• *!room create* - Create a chatroom.\n'
+         '• *!room leave* - Leave a chatroom.\n'
+         '• *!room destroy* - Destroy a chatroom.\n'
+         ' *Example*\n'
+         ' _This is a very basic plugin to try out your new installation and '
+         'get you started.\n'
+         '    Feel free to tweak me to experiment with Errbot.\n'
+         '    You can find me in your init directory in the subdirectory '
+         'plugins._\n'
+         '• *!tryme* - Execute to check if Errbot responds to command.\n'
+         ' *Flows*\n'
+         ' _Management commands related to flows / conversations._\n'
+         '• *!flows start* - Manually start a flow within the context of the '
+         'calling user.\n'
+         '• *!flows list* - Displays the list of setup flows.\n'
+         '• *!flows stop* - Stop flows you are in.\n'
+         '• *!flows kill* - usage: flows_kill [-h] user flow_name\n'
+         '• *!flows show* - Shows the structure of a flow.\n'
+         '• *!flows status* - Displays the list of started flows.\n'
+         ' *Health*\n'
+         ' _Core plugin for bot lifecycle and health related commands._\n'
+         '• *!status gc* - shows the garbage collection details\n'
+         '• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]\n'
+         '• *!uptime* - Return the uptime of the bot\n'
+         '• *!status plugins* - shows the plugin status\n'
+         '• *!status* - If I am alive I should be able to respond to this one\n'
+         '• *!restart* - Restart the bot.\n'
+         '• *!status load* - shows the load status\n'
+         ' *Help*\n'
+         ' _Core plugin of help related functions._\n'
+         '• *!help* - Returns a help string listing available options.\n'
+         '• *!apropos* - Returns a help string listing available options.\n'
+         '• *!about* - Return information about this Errbot instance and '
+         'version\n'
+         ' *Plugins*\n'
+         ' _Commands to manage the plugins of the bot by chatting._\n'
+         '• *!repos install* - install a plugin repository from the given '
+         'source or a known public repo (see...\n'
+         '• *!plugin blacklist* - Blacklist a plugin so that it will not be '
+         'loaded automatically during bot sta...\n'
+         '• *!plugin unblacklist* - Remove a plugin from the blacklist\n'
+         '• *!plugin activate* - activate a plugin. [calls .activate() on the '
+         'plugin]\n'
+         '• *!repos update* - update the bot and/or plugins\n'
+         '• *!plugin reload* - reload a plugin: reload the code of the plugin '
+         'leaving the activation status ...\n'
+         '• *!plugin config* - configure or get the configuration / '
+         'configuration template for a specific pl...\n'
+         '• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on '
+         'the plugin]\n'
+         '• *!repos uninstall* - uninstall a plugin repository by name.\n'
+         '• *!repos search* - Searches the repo index.\n'
+         '• *!repos* - list the current active plugin repositories\n'
+         ' *Utils*\n'
+         ' _Core Errbot utils commands._\n'
+         '• *!echo* - A simple echo command. Useful for encoding tests etc '
+         '...\n'
+         '• *!log tail* - Display a tail of the log of n lines or 40 by '
+         'default\n'
+         '• *!render test* - Tests / showcases the markdown rendering on your '
+         'current backend\n'
+         '• *!whoami* - A simple command echoing the details of your '
+         'identifier. Useful to debug iden...\n'
+         '• *!history* - display the command history',
+ 'ts': '1484385234.000020',
+ 'type': 'message',
+ 'user': 'U3RKPPXJ8'}
+2017-01-14 09:13:54,727 DEBUG    errbot.backends.slack     Escaped IDs event text: _All commands_
+
+ *Backup*
+ _Backup related commands._
+• *!backup* - Backup everything.
+ *ChatRoom*
+ _This is a basic implementation of a chatroom_
+• *!room join* - Join (creating it first if needed) a chatroom.
+• *!room topic* - Get or set the topic for a room.
+• *!room invite* - Invite one or more people into a chatroom.
+• *!room list* - List chatrooms the bot has joined.
+• *!room occupants* - List the occupants in a given chatroom.
+• *!room create* - Create a chatroom.
+• *!room leave* - Leave a chatroom.
+• *!room destroy* - Destroy a chatroom.
+ *Example*
+ _This is a very basic plugin to try out your new installation and get you started.
+    Feel free to tweak me to experiment with Errbot.
+    You can find me in your init directory in the subdirectory plugins._
+• *!tryme* - Execute to check if Errbot responds to command.
+ *Flows*
+ _Management commands related to flows / conversations._
+• *!flows start* - Manually start a flow within the context of the calling user.
+• *!flows list* - Displays the list of setup flows.
+• *!flows stop* - Stop flows you are in.
+• *!flows kill* - usage: flows_kill [-h] user flow_name
+• *!flows show* - Shows the structure of a flow.
+• *!flows status* - Displays the list of started flows.
+ *Health*
+ _Core plugin for bot lifecycle and health related commands._
+• *!status gc* - shows the garbage collection details
+• *!shutdown* - usage: shutdown [-h] [--kill] [--confirm]
+• *!uptime* - Return the uptime of the bot
+• *!status plugins* - shows the plugin status
+• *!status* - If I am alive I should be able to respond to this one
+• *!restart* - Restart the bot.
+• *!status load* - shows the load status
+ *Help*
+ _Core plugin of help related functions._
+• *!help* - Returns a help string listing available options.
+• *!apropos* - Returns a help string listing available options.
+• *!about* - Return information about this Errbot instance and version
+ *Plugins*
+ _Commands to manage the plugins of the bot by chatting._
+• *!repos install* - install a plugin repository from the given source or a known public repo (see...
+• *!plugin blacklist* - Blacklist a plugin so that it will not be loaded automatically during bot sta...
+• *!plugin unblacklist* - Remove a plugin from the blacklist
+• *!plugin activate* - activate a plugin. [calls .activate() on the plugin]
+• *!repos update* - update the bot and/or plugins
+• *!plugin reload* - reload a plugin: reload the code of the plugin leaving the activation status ...
+• *!plugin config* - configure or get the configuration / configuration template for a specific pl...
+• *!plugin deactivate* - deactivate a plugin. [calls .deactivate on the plugin]
+• *!repos uninstall* - uninstall a plugin repository by name.
+• *!repos search* - Searches the repo index.
+• *!repos* - list the current active plugin repositories
+ *Utils*
+ _Core Errbot utils commands._
+• *!echo* - A simple echo command. Useful for encoding tests etc ...
+• *!log tail* - Display a tail of the log of n lines or 40 by default
+• *!render test* - Tests / showcases the markdown rendering on your current backend
+• *!whoami* - A simple command echoing the details of your identifier. Useful to debug iden...
+• *!history* - display the command history
+2017-01-14 09:13:54,729 DEBUG    errbot.core               Ignoring message from self
+2017-01-14 09:13:54,767 DEBUG    requests.packages.urllib3.connectionpool "POST /api/chat.postMessage HTTP/1.1" 200 1439
+2017-01-14 09:13:54,770 DEBUG    errbot.flow               Test if the command help is a trigger for an inflight flow ...
+2017-01-14 09:13:54,771 DEBUG    errbot.flow               None matched.
+2017-01-14 09:13:54,771 DEBUG    errbot.flow               Test if the command help is an auto-trigger for any flow ...
+2017-01-14 09:14:00,110 DEBUG    errbot.backends.slack     No event handler available for reconnect_url, ignoring this event
+2017-01-14 09:17:00,113 DEBUG    errbot.backends.slack     No event handler available for reconnect_url, ignoring this event
