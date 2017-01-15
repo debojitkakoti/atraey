@@ -54,13 +54,41 @@ class Metricsbot(BotPlugin):
             ydata =  list();
             for hit in res['hits']['hits']:
                 xdata.append(hit['_source']['@timestamp'])
-                ydata.append(hit['_source']['apache']['status']['cpu']['load'])
-            xdatajson = json.dumps(xdata)
-            ydatajson = json.dumps(ydata) 
-            #fig = {'data': [{'x': xdatajson, 'y': ydatajson, 'type': 'line'}]}
-            matplotlib.use('Agg') 
+                ydata.append(hit['_source']['apache']['status']['cpu']['load']) 
             img_name = "apache_status_cpu_load_" + str(uuid.uuid4())+".html"
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
-            return HOST_URL + '/' + img_name
+            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
         else:
             return "Oops no enough data to measure apache cpu load"
+        
+    @botcmd
+    def get_metric_apache_status_kb(self, mess, args):
+        res = self.es_request_metric('apache.status.total_kbytes')
+        
+        if  res['hits']['hits']:
+            xdata =  list();
+            ydata =  list();
+            for hit in res['hits']['hits']:
+                xdata.append(hit['_source']['@timestamp'])
+                ydata.append(hit['_source']['apache']['status']['total_kbytes'])
+            img_name = "apache_status_kb_" + str(uuid.uuid4())+".html"
+            plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
+            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+        else:
+            return "Oops no enough data to measure apache status kbytes served"
+        
+    @botcmd
+    def get_metric_apache_status_accesses(self, mess, args):
+        res = self.es_request_metric('apache.status.total_accesses')
+        
+        if  res['hits']['hits']:
+            xdata =  list();
+            ydata =  list();
+            for hit in res['hits']['hits']:
+                xdata.append(hit['_source']['@timestamp'])
+                ydata.append(hit['_source']['apache']['status']['total_accesses'])
+            img_name = "apache_status_accesses_" + str(uuid.uuid4())+".html"
+            plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
+            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+        else:
+            return "Oops no enough data to measure apache status total accesses"
