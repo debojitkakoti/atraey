@@ -108,7 +108,13 @@ class Metricsbot(BotPlugin):
                 ydata.append(hit['_source']['apache']['status']['total_kbytes'])
             img_name = "apache_status_kb_" + str(uuid.uuid4())+".html"
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
-            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            self.send_card(title='Metric Graph link',
+                       body='Click above link for metric data\n',
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       link=HOST_URL + '/' + img_name,
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops no enough data to measure apache status kbytes served"
         
@@ -124,7 +130,13 @@ class Metricsbot(BotPlugin):
                 ydata.append(hit['_source']['apache']['status']['total_accesses'])
             img_name = "apache_status_accesses_" + str(uuid.uuid4())+".html"
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
-            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            self.send_card(title='Metric Graph link',
+                       body='Click above link for metric data\n',
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       link=HOST_URL + '/' + img_name,
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops no enough data to measure apache status total accesses"
         
@@ -140,7 +152,13 @@ class Metricsbot(BotPlugin):
                 ydata.append(hit['_source']['apache']['status']['requests_per_sec'])
             img_name = "apache_status_requests_" + str(uuid.uuid4())+".html"
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
-            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            self.send_card(title='Metric Graph link',
+                       body='Click above link for metric data\n',
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       link=HOST_URL + '/' + img_name,
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops no enough data to measure apache status requests per second"
         
@@ -156,7 +174,13 @@ class Metricsbot(BotPlugin):
                 ydata.append(hit['_source']['apache']['status']['bytes_per_sec'])
             img_name = "apache_status_bps_" + str(uuid.uuid4())+".html"
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
-            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            self.send_card(title='Metric Graph link',
+                       body='Click above link for metric data\n',
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       link=HOST_URL + '/' + img_name,
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops no enough data to measure apache status bytes per second"
         
@@ -172,7 +196,13 @@ class Metricsbot(BotPlugin):
                 ydata.append(hit['_source']['apache']['status']['bytes_per_request'])
             img_name = "apache_status_bpr_" + str(uuid.uuid4())+".html"
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
-            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            self.send_card(title='Metric Graph link',
+                       body='Click above link for metric data\n',
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       link=HOST_URL + '/' + img_name,
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops no enough data to measure apache status bytes per request"
 
@@ -180,7 +210,12 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_workers_busy(self, mess, args):
         res = self.es_request_metric_single('apache.status.workers.busy')
         if  res['hits']['hits'][0]:
-            return 'Number of workers busy\n' + str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['busy'])
+            #return 'Number of workers busy\n' + str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['busy'])
+            self.send_card(title='Number of workers busy',
+                       body=str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['busy']),
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops not enough data to show busy workers"
 
@@ -188,7 +223,12 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_workers_idle(self, mess, args):
         res = self.es_request_metric_single('apache.status.workers.idle')
         if  res['hits']['hits'][0]:
-            return 'Number of workers idle\n' + str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['idle'])
+            #return 'Number of workers idle\n' + str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['idle'])
+            self.send_card(title='Number of workers idle',
+                       body=str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['idle']),
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops not enough data to show idle workers"
         
@@ -196,7 +236,12 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_cpu_load(self, mess, args):
         res = self.es_request_metric_single('apache.status.cpu.load')
         if  res['hits']['hits'][0]:
-            return 'CPU Load \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['load'])
+            #return 'CPU Load \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['load'])
+            self.send_card(title='CPU Load',
+                       body=str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['load']),
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops not enough data to show cpu load"
         
@@ -204,7 +249,12 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_cpu_user(self, mess, args):
         res = self.es_request_metric_single('apache.status.cpu.user')
         if  res['hits']['hits'][0]:
-            return 'CPU User \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['user'])
+            #return 'CPU User \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['user'])
+            self.send_card(title='CPU User',
+                       body=str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['user']),
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops not enough data to show cpu user"
         
@@ -212,7 +262,12 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_cpu_system(self, mess, args):
         res = self.es_request_metric_single('apache.status.cpu.system')
         if  res['hits']['hits'][0]:
-            return 'CPU System \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['system'])
+            #return 'CPU System \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['system'])
+            self.send_card(title='CPU System',
+                       body=str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['system']),
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops not enough data to show cpu system"
         
@@ -220,7 +275,12 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_connections(self, mess, args):
         res = self.es_request_metric_single('apache.status.connections.total')
         if  res['hits']['hits'][0]:
-            return 'Total Connections \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['connections']['total'])
+            #return 'Total Connections \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['connections']['total'])
+            self.send_card(title='Total Connections',
+                       body=str(res['hits']['hits'][0]['_source']['apache']['status']['connections']['total']),
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops not enough data to show total connections"
         
@@ -228,6 +288,11 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_load(self, mess, args):
         res = self.es_request_metric_single('apache.status.load.5')
         if  res['hits']['hits'][0]:
-            return 'Avg Load in last 5 minutes \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['load']['5'])
+            #return 'Avg Load in last 5 minutes \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['load']['5'])
+            self.send_card(title='Avg Load in last 5 minutes',
+                       body=str(res['hits']['hits'][0]['_source']['apache']['status']['load']['5']),
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png",
+                       color='red',
+                       in_reply_to=mess)
         else:
             return "Oops not enough data to show avg load"
