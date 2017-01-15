@@ -34,7 +34,7 @@ BOT_IDENTITY = {
     # 'endpoint' : 'https://api.hipchat.com'
 
     ## Slack mode (comment the others above if using this mode)
-    'token': 'xoxb-127650793362-J6eAQYKLfhb8cQvjFLCl23g3',
+    'token': 'xoxb-127650793362-QfsuP9gQ8IDmW6oLt5Q3tqgA',
 
     ## Telegram mode (comment the others above if using this mode)
     # 'token': '103419016:AAbcd1234...',
