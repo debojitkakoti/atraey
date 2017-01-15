@@ -86,7 +86,12 @@ class Metricsbot(BotPlugin):
                 ydata.append(hit['_source']['apache']['status']['cpu']['load']) 
             img_name = "apache_status_cpu_load_" + str(uuid.uuid4())+".html"
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
-            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+            self.send_card(title='Metric Graph link',
+                       body='Click below link for metric data\n',
+                       link=img_name,
+                       color='red',
+                       in_reply_to=msg)
         else:
             return "Oops no enough data to measure apache cpu load"
         
