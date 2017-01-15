@@ -31,8 +31,10 @@ class Jenkinsbot(BotPlugin):
              plugin_list +=" Short Name:" + plugin.shortName + " Long Name: " + plugin.longName + " Version: " + plugin.version + " URL: " + plugin.url + " Active: " + str(plugin.active) + " Enabled: " + str(plugin.enabled) + "\n\n"
         return plugin_list
     
-    @botcmd
+    @botcmd(split_args_with=None)
     def start_build(self, mess, args):
-        params = {'VERSION': '1.2.3', 'PYTHON_VER': '2.7'}
-        self.connect_server().build_job(args, params)
-        return args
+        jobname = args.pop(0)
+        params = dict([(k, v) for k,v in zip (args[::2], args[1::2])])
+
+        self.connect_server().build_job(jobname, params)
+        return "Build Triggered!"
