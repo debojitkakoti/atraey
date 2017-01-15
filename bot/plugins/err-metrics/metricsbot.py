@@ -38,6 +38,35 @@ class Metricsbot(BotPlugin):
       ]
        })
         return res
+    
+    def es_request_metric_single(self, metric_value):
+        es = Elasticsearch(ES_HOST)
+        res = es.search(index=METRIC_INDEX, body={
+    		"query": {
+        		"bool":{
+            "must":{
+                "range" : {
+                    "@timestamp" : {
+                        "gte" : "now-1h"
+                    }
+                }
+            },
+            "filter": {
+                "exists": {
+                    "field": metric_value
+                }
+            }
+        }
+    },
+    "_source" : [metric_value,"@timestamp"],
+    "size":1,
+    "sort" : [
+        {
+            "@timestamp" : {"order" : "asc"}
+        }
+      ]
+       })
+        return res
 
     def random_alphanumeric(self,limit):
         #ascii alphabet of all alphanumerals
@@ -140,3 +169,19 @@ class Metricsbot(BotPlugin):
             return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
         else:
             return "Oops no enough data to measure apache status bytes per request"
+
+    @botcmd
+    def get_metric_apache_status_workers_busy(self, mess, args):
+        res = self.es_request_metric_single('apache.status.workers.busy')
+        if  res['hits']['hits'][0]:
+            return 'Number of workers busy\n' + res['hits']['hits'][0]['_source']['apache']['status']['workers']['busy']
+        else:
+            return "Oops not enough data to show busy workers"
+
+    @botcmd
+    def get_metric_apache_status_workers_idle(self, mess, args):
+        res = self.es_request_metric_single('apache.status.workers.idle')
+        if  res['hits']['hits'][0]:
+            return 'Number of workers idle\n' + res['hits']['hits'][0]['_source']['apache']['status']['workers']['idle']
+        else:
+            return "Oops not enough data to show idle workers"
