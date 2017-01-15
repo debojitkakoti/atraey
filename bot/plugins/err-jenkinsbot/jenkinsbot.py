@@ -15,6 +15,24 @@ class Jenkinsbot(BotPlugin):
 
     @botcmd
     def get_running_jobs(self, mess, args):
-        for job_name, job_instance in self.connect_server().get_jobs():
-            self.log.debug(job_instance.name)
-            return job_instance.name
+        jobs = self.connect_server().get_jobs()
+        self.log.debug(jobs)
+        if jobs is None:
+            return "No running job!"
+        job_list = " "
+        for job_name, job_instance in jobs:
+             job_list += " *Job Name:* " + job_instance.name + " *Job Description:* " + job_instance.get_description() + " *Is Job running:*"+ str(job_instance.is_running()) + " *Is Job enabled:*"+ str(job_instance.is_enabled()) +"\n\n"
+        return job_list
+ 
+    @botcmd
+    def get_jenkins_plugins(self, mess, args):
+        plugin_list = ""
+        for plugin in self.connect_server().get_plugins().values():
+             plugin_list +=" Short Name:" + plugin.shortName + " Long Name: " + plugin.longName + " Version: " + plugin.version + " URL: " + plugin.url + " Active: " + str(plugin.active) + " Enabled: " + str(plugin.enabled) + "\n\n"
+        return plugin_list
+    
+    @botcmd
+    def start_build(self, mess, args):
+        params = {'VERSION': '1.2.3', 'PYTHON_VER': '2.7'}
+        self.connect_server().build_job(args, params)
+        return args
