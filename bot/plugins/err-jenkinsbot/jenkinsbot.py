@@ -21,8 +21,11 @@ class Jenkinsbot(BotPlugin):
             return "No running job!"
         job_list = " "
         for job_name, job_instance in jobs:
-             job_list += " *Job Name:* " + job_instance.name + " *Job Description:* " + job_instance.get_description() + " *Is Job running:*"+ str(job_instance.is_running()) + " *Is Job enabled:*"+ str(job_instance.is_enabled()) +"\n\n"
-        return job_list
+             job_list += " *Job Name: " + job_instance.name + " Job Description: " + job_instance.get_description() + " Is Job running:"+ str(job_instance.is_running()) + " Is Job enabled:"+ str(job_instance.is_enabled()) +"*\n\n"
+        self.send_card(title='Current Jenkins Job Details',
+                       body=job_list,
+                       color='green',
+                       in_reply_to=mess)
  
     @botcmd
     def get_jenkins_plugins(self, mess, args):

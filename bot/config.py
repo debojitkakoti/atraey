@@ -34,7 +34,7 @@ BOT_IDENTITY = {
     # 'endpoint' : 'https://api.hipchat.com'
 
     ## Slack mode (comment the others above if using this mode)
-    'token': 'xoxb-127650793362-cg1tq05GrAmXe1kfDvNiXYxK',
+    'token': 'xoxb-127650793362-EMP9lN0iPvRUdNWtiHtLmSI8',
 
     ## Telegram mode (comment the others above if using this mode)
     # 'token': '103419016:AAbcd1234...',
@@ -76,9 +76,9 @@ BOT_IDENTITY = {
 # names, rather than the BOT_PREFIX above. This option allows you to
 # specify alternative prefixes the bot will respond to in addition to
 # the prefix above.
-BOT_ALT_PREFIXES = ('atraey',)
+BOT_ALT_PREFIXES = ('atraeyn',)
 
-JENKINS_URL = 'http://139.59.12.124:8080/'
+JENKINS_URL = 'http://139.59.13.250:8080/'
 JENKINS_USERNAME = 'admin'
 JENKINS_PASSWORD = 'admin'
 
