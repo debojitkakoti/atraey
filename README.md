@@ -10,10 +10,10 @@ Project Atraey Bot is a collaborative chatOps service for CI/CD,code repo manage
 
    This is Atraey Bot plugin for jenkins management.
    
-- !get_jenkins_plugins - 
-- !get_running_jobs - 
-- !start_build - 
-- !get_jenkins_version - 
+- !get_jenkins_plugins - To get all installed Jenkins Plugins and status.
+- !get_running_jobs - To get Jenkins jobs status. e.g. whether it job is running state.
+- !start_build Development VERSION 1.2.3 PYTHON_VER 2.7 - To start parameterized build
+- !get_jenkins_version - To get the Jenkins Version 
 
 ## Metricsbot
 
@@ -36,3 +36,12 @@ This is Atraey Bot plugin for log explorer
 ## Errorsbot
 
 - !get_error_apache - Get latest apache error data with google search link
+
+## GitBot
+
+Tools to follow your git repositories
+
+- !git follow - Follow the given git repository url and be notified when somebody commits som...
+- !git unfollow - Unfollow the given git repository url or specific heads
+- !git following - Just prints out which git repo the bot is following
+
