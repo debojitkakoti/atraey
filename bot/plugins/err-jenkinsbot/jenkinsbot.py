@@ -24,7 +24,7 @@ class Jenkinsbot(BotPlugin):
              job_list += " *Job Name: " + job_instance.name + " Job Description: " + job_instance.get_description() + " Is Job running:"+ str(job_instance.is_running()) + " Is Job enabled:"+ str(job_instance.is_enabled()) +"*\n\n"
         self.send_card(title='Current Jenkins Job Details',
                        body=job_list,
-                       color='green',
+                       color='red',
                        in_reply_to=mess)
  
     @botcmd
@@ -32,7 +32,10 @@ class Jenkinsbot(BotPlugin):
         plugin_list = ""
         for plugin in self.connect_server().get_plugins().values():
              plugin_list +=" Short Name:" + plugin.shortName + " Long Name: " + plugin.longName + " Version: " + plugin.version + " URL: " + plugin.url + " Active: " + str(plugin.active) + " Enabled: " + str(plugin.enabled) + "\n\n"
-        return plugin_list
+        self.send_card(title='Jenkins Plugins Status',
+                       body=plugin_list,
+                       color='red',
+                       in_reply_to=mess)
     
     @botcmd(split_args_with=None)
     def start_build(self, mess, args):
@@ -40,4 +43,7 @@ class Jenkinsbot(BotPlugin):
         params = dict([(k, v) for k,v in zip (args[::2], args[1::2])])
 
         self.connect_server().build_job(jobname, params)
-        return "Build Triggered!"
+        self.send_card(title='Build Status?',
+                       body='Triggered',
+                       color='red',
+                       in_reply_to=mess)
