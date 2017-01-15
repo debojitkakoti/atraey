@@ -1,7 +1,7 @@
-# Atraey Bot - ChatOps for team
+# Atraey Bot - ChatOps for Team
 
 Project Atraey Bot is a collaborative chatOps service for CI/CD,code repo management and infrastructure monitoring to increase ops team productivity. 
-
+![logo](https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png)
 # Usage
 
 ## Jenkinsbot
