@@ -7,10 +7,10 @@ import logging
 
 BACKEND = 'Slack'  # Errbot will start in text mode (console only mode) and will answer commands from there.
 
-BOT_DATA_DIR = r'/root/bot/data'
-BOT_EXTRA_PLUGIN_DIR = '/root/bot/plugins'
+BOT_DATA_DIR = r'/root/atraey/bot/data'
+BOT_EXTRA_PLUGIN_DIR = '/root/atraey/bot/plugins'
 
-BOT_LOG_FILE = r'/root/bot/errbot.log'
+BOT_LOG_FILE = r'/root/atraey/bot/errbot.log'
 BOT_LOG_LEVEL = logging.DEBUG
 
 BOT_ADMINS = ('debojitkakoti88', )  # !! Don't leave that to "CHANGE ME" if you connect your errbot to a chat system !!
@@ -34,7 +34,7 @@ BOT_IDENTITY = {
     # 'endpoint' : 'https://api.hipchat.com'
 
     ## Slack mode (comment the others above if using this mode)
-    'token': 'xoxb-127650793362-YVd5OD7XrW7TJnlXAnuLAfUC',
+    'token': 'xoxb-127650793362-J6eAQYKLfhb8cQvjFLCl23g3',
 
     ## Telegram mode (comment the others above if using this mode)
     # 'token': '103419016:AAbcd1234...',
@@ -77,3 +77,11 @@ BOT_IDENTITY = {
 # specify alternative prefixes the bot will respond to in addition to
 # the prefix above.
 BOT_ALT_PREFIXES = ('atraey',)
+
+JENKINS_URL = 'http://139.59.12.124:8080/'
+JENKINS_USERNAME = 'admin'
+JENKINS_PASSWORD = 'admin'
+
+METRIC_INDEX = 'metricbeat'
+ES_HOST = 'http://139.59.17.53:9200'
+HOST_URL = 'http://139.59.12.124'

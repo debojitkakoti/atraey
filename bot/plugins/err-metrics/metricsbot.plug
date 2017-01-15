@@ -1,0 +1,10 @@
+[Core]
+Name = Metricsbot
+Module = metricsbot
+
+[Documentation]
+Description = This is a errbot metrics plugin.
+
+[Python]
+Version = 2+
+
