@@ -89,7 +89,7 @@ class Metricsbot(BotPlugin):
             #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
             self.send_card(title='Metric Graph link',
                        body='Click below link for metric data\n',
-                       link=img_name,
+                       link=HOST_URL + '/' + img_name,
                        color='red',
                        in_reply_to=mess)
         else:
