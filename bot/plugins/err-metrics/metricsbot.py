@@ -174,7 +174,7 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_workers_busy(self, mess, args):
         res = self.es_request_metric_single('apache.status.workers.busy')
         if  res['hits']['hits'][0]:
-            return 'Number of workers busy\n' + res['hits']['hits'][0]['_source']['apache']['status']['workers']['busy']
+            return 'Number of workers busy\n' + str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['busy'])
         else:
             return "Oops not enough data to show busy workers"
 
@@ -182,7 +182,7 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_workers_idle(self, mess, args):
         res = self.es_request_metric_single('apache.status.workers.idle')
         if  res['hits']['hits'][0]:
-            return 'Number of workers idle\n' + res['hits']['hits'][0]['_source']['apache']['status']['workers']['idle']
+            return 'Number of workers idle\n' + str(res['hits']['hits'][0]['_source']['apache']['status']['workers']['idle'])
         else:
             return "Oops not enough data to show idle workers"
         
@@ -190,7 +190,7 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_cpu_load(self, mess, args):
         res = self.es_request_metric_single('apache.status.cpu.load')
         if  res['hits']['hits'][0]:
-            return 'CPU Load \n' + res['hits']['hits'][0]['_source']['apache']['status']['cpu']['load']
+            return 'CPU Load \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['load'])
         else:
             return "Oops not enough data to show cpu load"
         
@@ -198,7 +198,7 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_cpu_user(self, mess, args):
         res = self.es_request_metric_single('apache.status.cpu.user')
         if  res['hits']['hits'][0]:
-            return 'CPU User \n' + res['hits']['hits'][0]['_source']['apache']['status']['cpu']['user']
+            return 'CPU User \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['user'])
         else:
             return "Oops not enough data to show cpu user"
         
@@ -206,7 +206,7 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_cpu_system(self, mess, args):
         res = self.es_request_metric_single('apache.status.cpu.system')
         if  res['hits']['hits'][0]:
-            return 'CPU System \n' + res['hits']['hits'][0]['_source']['apache']['status']['cpu']['system']
+            return 'CPU System \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['cpu']['system'])
         else:
             return "Oops not enough data to show cpu system"
         
@@ -214,7 +214,7 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_connections(self, mess, args):
         res = self.es_request_metric_single('apache.status.connections.total')
         if  res['hits']['hits'][0]:
-            return 'Total Connections \n' + res['hits']['hits'][0]['_source']['apache']['status']['connections']['total']
+            return 'Total Connections \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['connections']['total'])
         else:
             return "Oops not enough data to show total connections"
         
@@ -222,6 +222,6 @@ class Metricsbot(BotPlugin):
     def get_metric_apache_status_load(self, mess, args):
         res = self.es_request_metric_single('apache.status.load.5')
         if  res['hits']['hits'][0]:
-            return 'Avg Load in last 5 minutes \n' + res['hits']['hits'][0]['_source']['apache']['status']['load']['5']
+            return 'Avg Load in last 5 minutes \n' + str(res['hits']['hits'][0]['_source']['apache']['status']['load']['5'])
         else:
             return "Oops not enough data to show avg load"
