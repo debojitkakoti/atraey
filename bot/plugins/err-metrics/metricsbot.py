@@ -7,8 +7,6 @@ import random
 import uuid
 import json
 from plotly.offline import init_notebook_mode, plot_mpl
-import matplotlib
-import matplotlib.pyplot as plt
 from config import ES_HOST, METRIC_INDEX, HOST_URL
 
 class Metricsbot(BotPlugin):
