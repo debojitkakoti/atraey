@@ -37,7 +37,7 @@ class Jenkinsbot(BotPlugin):
                        color='red',
                        in_reply_to=mess)
     
-    @botcmd(split_args_with=None)
+    @botcmd(split_args_with=None, admin_only=True)
     def start_build(self, mess, args):
         jobname = args.pop(0)
         params = dict([(k, v) for k,v in zip (args[::2], args[1::2])])
