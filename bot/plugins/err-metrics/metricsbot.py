@@ -88,7 +88,8 @@ class Metricsbot(BotPlugin):
             plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
             #return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
             self.send_card(title='Metric Graph link',
-                       body='Click below link for metric data\n',
+                       body='Click above link for metric data\n',
+                       image="https://raw.githubusercontent.com/debojitkakoti/atraey/master/atraey-logo.png"
                        link=HOST_URL + '/' + img_name,
                        color='red',
                        in_reply_to=mess)
