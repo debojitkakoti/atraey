@@ -34,7 +34,7 @@ BOT_IDENTITY = {
     # 'endpoint' : 'https://api.hipchat.com'
 
     ## Slack mode (comment the others above if using this mode)
-    'token': 'xoxb-127669813620-8XOT8qbh7ya45ItqgV087BBS',
+    'token': 'xoxb-127650793362-cg1tq05GrAmXe1kfDvNiXYxK',
 
     ## Telegram mode (comment the others above if using this mode)
     # 'token': '103419016:AAbcd1234...',
@@ -78,3 +78,10 @@ BOT_IDENTITY = {
 # the prefix above.
 BOT_ALT_PREFIXES = ('atraey',)
 
+JENKINS_URL = 'http://139.59.12.124:8080/'
+JENKINS_USERNAME = 'admin'
+JENKINS_PASSWORD = 'admin'
+
+METRIC_INDEX = 'metricbeat'
+ES_HOST = 'http://139.59.17.53:9200'
+HOST_URL = 'http://139.59.12.124'

@@ -1,0 +1,10 @@
+[Core]
+Name = Jenkinsbot
+Module = jenkinsbot
+
+[Documentation]
+Description = This is a errbot jenkins plugin.
+
+[Python]
+Version = 2+
+
