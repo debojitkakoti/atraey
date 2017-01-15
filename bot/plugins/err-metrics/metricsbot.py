@@ -91,7 +91,7 @@ class Metricsbot(BotPlugin):
                        body='Click below link for metric data\n',
                        link=img_name,
                        color='red',
-                       in_reply_to=msg)
+                       in_reply_to=mess)
         else:
             return "Oops no enough data to measure apache cpu load"
         
