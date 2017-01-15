@@ -92,3 +92,35 @@ class Metricsbot(BotPlugin):
             return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
         else:
             return "Oops no enough data to measure apache status total accesses"
+        
+    @botcmd
+    def get_metric_apache_status_requests(self, mess, args):
+        res = self.es_request_metric('apache.status.requests_per_sec')
+        
+        if  res['hits']['hits']:
+            xdata =  list();
+            ydata =  list();
+            for hit in res['hits']['hits']:
+                xdata.append(hit['_source']['@timestamp'])
+                ydata.append(hit['_source']['apache']['status']['requests_per_sec'])
+            img_name = "apache_status_requests_" + str(uuid.uuid4())+".html"
+            plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
+            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+        else:
+            return "Oops no enough data to measure apache status requests per second"
+        
+    @botcmd
+    def get_metric_apache_status_bps(self, mess, args):
+        res = self.es_request_metric('apache.status.bytes_per_sec')
+        
+        if  res['hits']['hits']:
+            xdata =  list();
+            ydata =  list();
+            for hit in res['hits']['hits']:
+                xdata.append(hit['_source']['@timestamp'])
+                ydata.append(hit['_source']['apache']['status']['bytes_per_sec'])
+            img_name = "apache_status_bps_" + str(uuid.uuid4())+".html"
+            plot([go.Scatter(x=xdata, y=ydata)], filename='/var/www/html/'+img_name,image='jpeg')
+            return 'Click below link for metric data\n' + HOST_URL + '/' + img_name
+        else:
+            return "Oops no enough data to measure apache status bytes per second"
