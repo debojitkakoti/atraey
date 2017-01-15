@@ -3,7 +3,7 @@ Name = Metricsbot
 Module = metricsbot
 
 [Documentation]
-Description = This is a atraey bot metrics plugin.
+Description = This is a Atraey Bot metrics plugin.
 
 [Python]
 Version = 2+
