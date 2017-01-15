@@ -32,3 +32,7 @@ This is Atraey Bot plugin for log explorer
 - !get_metric_apache_status_bpr -graph for byte per request data
 - !get_metric_apache_cpu_load - cpu load historical chart over time
 - !get_metric_apache_status_cpu_system - system cpu usage data
+
+## Errorsbot
+
+- !get_error_apache - Get latest apache error data with google search link
