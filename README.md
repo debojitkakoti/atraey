@@ -8,7 +8,7 @@ Project Atraey Bot is a collaborative chatOps service for CI/CD,code repo manage
 
 ## Jenkinsbot
 
-   This is Atraey Bot plugin for jenkins amangement.
+   This is Atraey Bot plugin for jenkins management.
    
 - !get_jenkins_plugins - 
 - !get_running_jobs - 
